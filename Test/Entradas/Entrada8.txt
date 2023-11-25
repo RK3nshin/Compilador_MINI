@@ -1,0 +1,8 @@
+program teste8
+declare
+    decimal X ,Y
+begin
+    read(Y);
+    X := Y * 1.9;
+    write(X);
+end

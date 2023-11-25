@@ -1,0 +1,9 @@
+program teste8
+declare
+    decimal X ,Y
+begin
+    read(Y);
+    X := Y * 1.9;
+    while(X > 10);
+    write(`` Maior que 10: ´´)
+end

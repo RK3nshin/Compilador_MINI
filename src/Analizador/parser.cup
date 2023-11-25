@@ -1,0 +1,98 @@
+import java_cup.runtime.Symbol;
+
+/* Define o conjunto de terminais */
+terminal 
+  PROGRAM, DECLARE, BEGIN, INTEGER, DECIMAL, IF, THEN, ELSE, FOR, END, DO, TO, 
+  WHILE, READ, WRITE, OR, AND, MOD, NOT, COMMENT, IDENTIFIER, INTEGERCONSTANT, DECIMALCONSTANT,
+  ASSIGN_OP, CHARACTER, COMMA, SEMICOLON, RIGHT_PAREN, LEFT_PAREN, LEFT_SQUARE_BRACKET,
+  RIGHT_SQUARE_BRACKET, LEFT_CURLY_BRACE, RIGHT_CURLY_BRACE, EQ, MINUS, PLUS, LT, LE, NE, GT, GE,
+  MULT, MODULO, DIV, DGT, DLT, TGT, TLT, QUESTION_MARK, COLON, BACKTICK, ACUTE_ACCENT;
+
+/* Define o conjunto de não-terminais */
+non terminal 
+  Startprogram, Body, DeclList, Decl, IdentList, Type, Dlist, Commoindetifier, Semicolondecl,
+  Stmtlist, Stmt, Commostmt, Assignstmt, Simpleexp, Term, 
+  FactoA, Factor, Expression, Relop, Addop, Mulop, 
+  Shiftop, Literal, Condition, Writable, Readstmt, 
+  Writestmt, Stmtsuffix, Whilestmt, Dowhilestmt, 
+  Forstmt,Ifstmt,IFComp;
+
+start with Startprogram;
+
+/* Produções da gramática */
+Startprogram ::= PROGRAM IDENTIFIER Body;
+
+Body ::= Dlist BEGIN Stmtlist END;
+
+Dlist ::= DECLARE DeclList | ;
+
+DeclList ::= Decl Semicolondecl;
+
+Semicolondecl ::= SEMICOLON Decl Semicolondecl | ;
+
+Decl ::= Type IdentList;
+
+IdentList ::= IDENTIFIER Commoindetifier;
+
+Commoindetifier ::= COMMA IDENTIFIER Commoindetifier | ;
+
+Type ::= INTEGER | DECIMAL;
+
+Stmtlist ::= Stmt Commostmt;
+
+Commostmt ::= COMMA Stmt Commostmt | ;
+
+Stmt ::= Assignstmt 
+         | Readstmt
+         | Writestmt
+         | Whilestmt
+         | Ifstmt;
+
+
+Ifstmt ::= IF Condition THEN  Stmtlist  IFComp;
+
+IFComp ::= END
+          | ELSE  Stmtlist END;
+
+Assignstmt ::= IDENTIFIER ASSIGN_OP Simpleexp;
+
+Whilestmt ::= WHILE Condition DO Stmtlist END;
+
+Dowhilestmt ::= DO Stmtlist Stmtsuffix;
+
+Stmtsuffix ::= WHILE Condition SEMICOLON;
+
+Simpleexp ::= Term 
+              | Simpleexp Addop Term
+              | RIGHT_PAREN Simpleexp LEFT_PAREN QUESTION_MARK Simpleexp COLON Simpleexp;
+
+Readstmt ::= READ RIGHT_PAREN IDENTIFIER LEFT_PAREN SEMICOLON;
+
+Writestmt ::= WRITE RIGHT_PAREN Writable LEFT_PAREN SEMICOLON;
+
+Forstmt ::= FOR Assignstmt TO Condition DO Stmtlist END;
+
+Writable ::= Simpleexp | Literal;
+
+Condition ::= Expression;
+
+Term ::= FactoA | Term Mulop FactoA;
+
+FactoA ::= Factor | NOT Factor | MINUS Factor;
+
+Factor ::= IDENTIFIER | INTEGERCONSTANT | DECIMALCONSTANT | RIGHT_PAREN Expression LEFT_PAREN;
+
+Expression ::= Simpleexp | Simpleexp Relop Simpleexp; 
+
+Relop ::= EQ | GT | GE | LT | LE | NE;
+
+Addop ::= PLUS | MINUS | OR;
+
+Mulop ::= MULT | DIV | MOD | AND;
+
+Shiftop ::= DGT | DLT | TGT | TLT;
+
+Literal ::= BACKTICK BACKTICK CHARACTER ACUTE_ACCENT ACUTE_ACCENT 
+             | BACKTICK BACKTICK IDENTIFIER CHARACTER ACUTE_ACCENT ACUTE_ACCENT 
+             | BACKTICK BACKTICK CHARACTER IDENTIFIER ACUTE_ACCENT ACUTE_ACCENT
+             | BACKTICK BACKTICK IDENTIFIER ACUTE_ACCENT ACUTE_ACCENT ;
