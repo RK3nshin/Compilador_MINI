@@ -2,6 +2,9 @@
 
 import java_cup.runtime.Symbol;
 import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 /* Declaração de variável global para rastrear o número da ação */
 
@@ -37,12 +40,13 @@ class Yylex implements java_cup.runtime.Scanner {
    * Translates characters to character classes
    */
   private static final String ZZ_CMAP_PACKED = 
-    "\11\0\1\1\1\1\1\0\1\0\1\1\22\0\1\1\4\0\1\35"+
-    "\4\0\1\13\1\10\1\0\1\10\1\4\1\13\12\3\1\20\1\0"+
-    "\1\7\1\5\1\6\2\0\32\2\6\0\1\16\1\26\1\24\1\15"+
-    "\1\23\1\31\1\22\1\32\1\27\2\2\1\25\1\14\1\17\1\11"+
-    "\1\21\1\2\1\12\1\33\1\30\2\2\1\34\3\2\1\0\1\1"+
-    "\10\0\1\0\u1fa2\0\1\0\1\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\udfe6\0";
+    "\11\0\1\1\1\1\1\0\1\0\1\1\22\0\1\1\4\0\1\31"+
+    "\2\0\1\35\1\34\1\42\1\36\1\33\1\37\1\4\1\43\12\3"+
+    "\1\5\1\32\1\41\1\6\1\40\1\44\1\0\32\2\5\0\1\45"+
+    "\1\13\1\21\1\17\1\15\1\16\1\25\1\12\1\26\1\22\2\2"+
+    "\1\20\1\14\1\23\1\11\1\7\1\2\1\10\1\27\1\24\2\2"+
+    "\1\30\3\2\1\0\1\1\10\0\1\0\56\0\1\46\u1f73\0\1\0"+
+    "\1\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\udfe6\0";
 
   /** 
    * Translates characters to character classes
@@ -55,16 +59,18 @@ class Yylex implements java_cup.runtime.Scanner {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\1\1\1\2\1\3\1\4\3\5\1\6\2\3"+
-    "\1\7\4\3\1\1\7\3\1\10\1\0\2\11\1\12"+
-    "\2\3\1\13\3\3\1\14\5\3\1\15\1\16\4\3"+
-    "\1\17\1\11\1\3\1\20\1\3\1\21\1\22\1\3"+
-    "\1\23\4\3\1\24\2\3\1\25\3\3\1\26\2\3"+
-    "\1\27\5\3\1\30\1\3\1\31\1\32\4\3\1\33"+
-    "\1\34\1\35\1\36";
+    "\1\0\1\1\1\2\1\3\1\4\1\5\1\6\15\3"+
+    "\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16"+
+    "\1\17\1\20\1\21\1\22\1\23\1\24\1\0\1\25"+
+    "\2\3\1\26\2\3\1\27\5\3\1\30\1\3\1\31"+
+    "\4\3\1\32\1\33\1\34\1\35\1\36\1\37\2\3"+
+    "\1\40\1\41\2\3\1\42\2\3\1\43\1\3\1\44"+
+    "\2\3\1\45\1\46\1\3\1\47\2\3\1\50\2\3"+
+    "\1\51\5\3\1\52\1\3\1\53\1\54\4\3\1\55"+
+    "\1\56\1\57\1\60";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[88];
+    int [] result = new int[101];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -89,20 +95,22 @@ class Yylex implements java_cup.runtime.Scanner {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\36\0\36\0\74\0\132\0\36\0\170\0\226"+
-    "\0\36\0\264\0\322\0\36\0\360\0\u010e\0\u012c\0\u014a"+
-    "\0\u0168\0\u0186\0\u01a4\0\u01c2\0\u01e0\0\u01fe\0\u021c\0\u023a"+
-    "\0\36\0\u0258\0\u0276\0\u0294\0\74\0\u02b2\0\u02d0\0\74"+
-    "\0\u02ee\0\u030c\0\u032a\0\36\0\u0348\0\u0366\0\u0384\0\u03a2"+
-    "\0\u03c0\0\74\0\74\0\u03de\0\u03fc\0\u041a\0\u0438\0\u0258"+
-    "\0\36\0\u0456\0\74\0\u0474\0\74\0\74\0\u0492\0\74"+
-    "\0\u04b0\0\u04ce\0\u04ec\0\u050a\0\74\0\u0528\0\u0546\0\74"+
-    "\0\u0564\0\u0582\0\u05a0\0\74\0\u05be\0\u05dc\0\74\0\u05fa"+
-    "\0\u0618\0\u0636\0\u0654\0\u0672\0\74\0\u0690\0\74\0\74"+
-    "\0\u06ae\0\u06cc\0\u06ea\0\u0708\0\74\0\74\0\74\0\74";
+    "\0\0\0\47\0\47\0\116\0\165\0\234\0\47\0\303"+
+    "\0\352\0\u0111\0\u0138\0\u015f\0\u0186\0\u01ad\0\u01d4\0\u01fb"+
+    "\0\u0222\0\u0249\0\u0270\0\u0297\0\47\0\47\0\47\0\47"+
+    "\0\47\0\47\0\47\0\u02be\0\u02e5\0\47\0\47\0\47"+
+    "\0\47\0\47\0\u030c\0\47\0\u0333\0\u035a\0\116\0\u0381"+
+    "\0\u03a8\0\116\0\u03cf\0\u03f6\0\u041d\0\u0444\0\u046b\0\116"+
+    "\0\u0492\0\116\0\u04b9\0\u04e0\0\u0507\0\u052e\0\47\0\u0555"+
+    "\0\47\0\47\0\u057c\0\u030c\0\u05a3\0\u05ca\0\116\0\116"+
+    "\0\u05f1\0\u0618\0\116\0\u063f\0\u0666\0\116\0\u068d\0\116"+
+    "\0\u06b4\0\u06db\0\47\0\47\0\u0702\0\116\0\u0729\0\u0750"+
+    "\0\116\0\u0777\0\u079e\0\116\0\u07c5\0\u07ec\0\u0813\0\u083a"+
+    "\0\u0861\0\116\0\u0888\0\116\0\116\0\u08af\0\u08d6\0\u08fd"+
+    "\0\u0924\0\116\0\116\0\116\0\116";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[88];
+    int [] result = new int[101];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -126,78 +134,56 @@ class Yylex implements java_cup.runtime.Scanner {
 
   private static final String ZZ_TRANS_PACKED_0 =
     "\1\2\1\3\1\4\1\5\1\2\1\6\1\7\1\10"+
-    "\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20"+
-    "\1\21\1\22\1\4\1\23\2\4\1\24\1\25\1\26"+
-    "\1\27\2\4\1\30\1\31\40\0\2\4\5\0\2\4"+
-    "\1\0\4\4\1\0\14\4\4\0\1\5\1\32\36\0"+
-    "\1\6\1\33\34\0\2\6\1\34\30\0\2\4\5\0"+
-    "\1\4\1\35\1\0\4\4\1\0\14\4\3\0\2\4"+
-    "\5\0\2\4\1\0\4\4\1\0\2\4\1\36\11\4"+
-    "\3\0\2\4\5\0\1\37\1\4\1\0\4\4\1\0"+
-    "\14\4\3\0\2\4\5\0\1\40\1\4\1\0\4\4"+
-    "\1\0\2\4\1\41\11\4\3\0\2\4\5\0\2\4"+
-    "\1\0\3\4\1\42\1\0\14\4\3\0\2\4\5\0"+
-    "\1\43\1\4\1\0\4\4\1\0\14\4\6\0\1\44"+
-    "\32\0\2\4\5\0\1\4\1\45\1\0\4\4\1\0"+
-    "\14\4\3\0\2\4\5\0\2\4\1\0\3\4\1\46"+
-    "\1\0\4\4\1\47\7\4\3\0\2\4\5\0\2\4"+
-    "\1\0\4\4\1\0\2\4\1\50\11\4\3\0\2\4"+
-    "\5\0\2\4\1\0\3\4\1\51\1\0\10\4\1\52"+
-    "\3\4\3\0\2\4\5\0\1\53\1\4\1\0\4\4"+
-    "\1\0\11\4\1\54\2\4\3\0\2\4\5\0\1\55"+
-    "\1\4\1\0\4\4\1\0\14\4\3\0\2\4\5\0"+
-    "\1\4\1\56\1\0\4\4\1\0\11\4\1\57\2\4"+
-    "\4\0\1\60\40\0\1\61\36\0\1\61\30\0\2\4"+
-    "\5\0\2\4\1\0\2\4\1\62\1\4\1\0\14\4"+
-    "\3\0\2\4\5\0\2\4\1\0\1\4\1\63\2\4"+
-    "\1\0\14\4\3\0\2\4\5\0\2\4\1\0\4\4"+
-    "\1\0\3\4\1\64\10\4\3\0\2\4\5\0\2\4"+
-    "\1\0\1\4\1\65\2\4\1\0\14\4\3\0\2\4"+
-    "\5\0\2\4\1\0\4\4\1\0\7\4\1\66\4\4"+
-    "\3\0\2\4\5\0\1\67\1\4\1\0\4\4\1\0"+
-    "\14\4\3\0\2\4\5\0\2\4\1\0\1\4\1\70"+
-    "\2\4\1\0\14\4\3\0\2\4\5\0\2\4\1\0"+
-    "\4\4\1\0\12\4\1\71\1\4\3\0\2\4\5\0"+
-    "\2\4\1\0\4\4\1\0\1\4\1\72\12\4\3\0"+
-    "\2\4\5\0\2\4\1\0\4\4\1\0\7\4\1\73"+
-    "\4\4\3\0\2\4\5\0\2\4\1\0\4\4\1\0"+
-    "\2\4\1\74\11\4\3\0\2\4\5\0\1\4\1\75"+
-    "\1\0\4\4\1\0\14\4\3\0\2\4\5\0\2\4"+
-    "\1\0\4\4\1\0\6\4\1\76\5\4\3\0\2\4"+
-    "\5\0\2\4\1\0\4\4\1\0\6\4\1\77\5\4"+
-    "\3\0\2\4\5\0\2\4\1\0\1\4\1\100\2\4"+
-    "\1\0\14\4\3\0\2\4\5\0\2\4\1\0\4\4"+
-    "\1\0\4\4\1\101\1\4\1\102\5\4\3\0\2\4"+
-    "\5\0\2\4\1\0\4\4\1\0\1\4\1\103\12\4"+
-    "\3\0\2\4\5\0\2\4\1\0\4\4\1\0\2\4"+
-    "\1\104\11\4\3\0\2\4\5\0\2\4\1\0\4\4"+
-    "\1\0\6\4\1\105\5\4\3\0\2\4\5\0\2\4"+
-    "\1\0\4\4\1\0\2\4\1\106\11\4\3\0\2\4"+
-    "\5\0\2\4\1\0\3\4\1\107\1\0\14\4\3\0"+
-    "\2\4\5\0\2\4\1\0\4\4\1\0\7\4\1\110"+
-    "\4\4\3\0\2\4\5\0\2\4\1\0\4\4\1\0"+
-    "\4\4\1\111\7\4\3\0\2\4\5\0\2\4\1\0"+
-    "\2\4\1\112\1\4\1\0\14\4\3\0\2\4\5\0"+
-    "\2\4\1\0\1\113\3\4\1\0\14\4\3\0\2\4"+
-    "\5\0\1\4\1\114\1\0\4\4\1\0\14\4\3\0"+
-    "\2\4\5\0\2\4\1\0\3\4\1\115\1\0\14\4"+
-    "\3\0\2\4\5\0\2\4\1\0\4\4\1\0\1\4"+
-    "\1\116\12\4\3\0\2\4\5\0\2\4\1\0\4\4"+
-    "\1\0\2\4\1\117\11\4\3\0\2\4\5\0\2\4"+
-    "\1\0\4\4\1\0\2\4\1\120\11\4\3\0\2\4"+
-    "\5\0\1\4\1\121\1\0\4\4\1\0\14\4\3\0"+
-    "\2\4\5\0\2\4\1\0\2\4\1\122\1\4\1\0"+
-    "\14\4\3\0\2\4\5\0\2\4\1\0\2\4\1\123"+
-    "\1\4\1\0\14\4\3\0\2\4\5\0\2\4\1\0"+
-    "\4\4\1\0\2\4\1\124\11\4\3\0\2\4\5\0"+
-    "\2\4\1\0\4\4\1\0\2\4\1\125\11\4\3\0"+
-    "\2\4\5\0\2\4\1\0\4\4\1\0\4\4\1\126"+
-    "\7\4\3\0\2\4\5\0\2\4\1\0\1\127\3\4"+
-    "\1\0\14\4\3\0\2\4\5\0\1\4\1\130\1\0"+
-    "\4\4\1\0\14\4\1\0";
+    "\1\11\1\12\1\4\1\13\1\14\1\15\1\16\2\4"+
+    "\1\17\1\20\1\21\1\22\1\23\2\4\1\24\1\25"+
+    "\1\26\1\27\1\30\1\31\1\32\1\33\1\34\1\35"+
+    "\1\36\1\37\1\40\1\41\1\42\51\0\2\4\3\0"+
+    "\22\4\21\0\1\5\1\43\50\0\1\44\42\0\2\4"+
+    "\3\0\1\4\1\45\20\4\20\0\2\4\3\0\7\4"+
+    "\1\46\12\4\20\0\2\4\3\0\1\4\1\47\20\4"+
+    "\20\0\2\4\3\0\14\4\1\50\5\4\20\0\2\4"+
+    "\3\0\2\4\1\51\17\4\20\0\2\4\3\0\2\4"+
+    "\1\52\4\4\1\53\12\4\20\0\2\4\3\0\11\4"+
+    "\1\54\2\4\1\55\5\4\20\0\2\4\3\0\7\4"+
+    "\1\56\12\4\20\0\2\4\3\0\14\4\1\57\1\4"+
+    "\1\60\3\4\20\0\2\4\3\0\2\4\1\61\17\4"+
+    "\20\0\2\4\3\0\2\4\1\62\14\4\1\63\2\4"+
+    "\20\0\2\4\3\0\2\4\1\64\17\4\20\0\2\4"+
+    "\3\0\1\4\1\65\15\4\1\66\2\4\24\0\1\67"+
+    "\31\0\1\70\14\0\1\71\31\0\1\72\1\73\10\0"+
+    "\1\74\45\0\2\4\3\0\2\4\1\75\17\4\20\0"+
+    "\2\4\3\0\4\4\1\76\15\4\20\0\2\4\3\0"+
+    "\6\4\1\77\13\4\20\0\2\4\3\0\6\4\1\100"+
+    "\13\4\20\0\2\4\3\0\10\4\1\101\11\4\20\0"+
+    "\2\4\3\0\20\4\1\102\1\4\20\0\2\4\3\0"+
+    "\6\4\1\103\13\4\20\0\2\4\3\0\3\4\1\104"+
+    "\16\4\20\0\2\4\3\0\15\4\1\105\4\4\20\0"+
+    "\2\4\3\0\15\4\1\106\4\4\20\0\2\4\3\0"+
+    "\7\4\1\107\12\4\20\0\2\4\3\0\1\4\1\110"+
+    "\20\4\20\0\2\4\3\0\13\4\1\111\6\4\20\0"+
+    "\2\4\3\0\13\4\1\112\6\4\56\0\1\113\47\0"+
+    "\1\114\7\0\2\4\3\0\3\4\1\115\16\4\20\0"+
+    "\2\4\3\0\6\4\1\116\13\4\20\0\2\4\3\0"+
+    "\11\4\1\117\1\4\1\120\6\4\20\0\2\4\3\0"+
+    "\7\4\1\121\12\4\20\0\2\4\3\0\13\4\1\122"+
+    "\6\4\20\0\2\4\3\0\7\4\1\123\12\4\20\0"+
+    "\2\4\3\0\14\4\1\124\5\4\20\0\2\4\3\0"+
+    "\15\4\1\125\4\4\20\0\2\4\3\0\11\4\1\126"+
+    "\10\4\20\0\2\4\3\0\1\4\1\127\20\4\20\0"+
+    "\2\4\3\0\4\4\1\130\15\4\20\0\2\4\3\0"+
+    "\5\4\1\131\14\4\20\0\2\4\3\0\14\4\1\132"+
+    "\5\4\20\0\2\4\3\0\3\4\1\133\16\4\20\0"+
+    "\2\4\3\0\7\4\1\134\12\4\20\0\2\4\3\0"+
+    "\7\4\1\135\12\4\20\0\2\4\3\0\4\4\1\136"+
+    "\15\4\20\0\2\4\3\0\1\4\1\137\20\4\20\0"+
+    "\2\4\3\0\4\4\1\140\15\4\20\0\2\4\3\0"+
+    "\7\4\1\141\12\4\20\0\2\4\3\0\5\4\1\142"+
+    "\14\4\20\0\2\4\3\0\7\4\1\143\12\4\20\0"+
+    "\2\4\3\0\11\4\1\144\10\4\20\0\2\4\3\0"+
+    "\1\4\1\145\20\4\16\0";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[1830];
+    int [] result = new int[2379];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -235,11 +221,12 @@ class Yylex implements java_cup.runtime.Scanner {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\2\11\2\1\1\11\2\1\1\11\2\1\1\11"+
-    "\14\1\1\11\1\0\11\1\1\11\14\1\1\11\47\1";
+    "\1\0\2\11\3\1\1\11\15\1\7\11\2\1\5\11"+
+    "\1\0\1\11\22\1\1\11\1\1\2\11\20\1\2\11"+
+    "\31\1";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[88];
+    int [] result = new int[101];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -315,7 +302,13 @@ class Yylex implements java_cup.runtime.Scanner {
   private int zzFinalHighSurrogate = 0;
 
   /* user code: */
-   TabelaSimbolos tabelaSimbolos = new TabelaSimbolos();
+     TabelaSimbolos tabelaSimbolos = new TabelaSimbolos();
+
+    /* public Yylex(String filePath,  TabelaSimbolos symbolTable) throws IOException {
+        this.zzReader = new BufferedReader(new FileReader(filePath));
+        this.tabelaSimbolos = symbolTable;
+    }*/
+
 
 
   /**
@@ -338,7 +331,7 @@ class Yylex implements java_cup.runtime.Scanner {
     char [] map = new char[0x110000];
     int i = 0;  /* index in packed string  */
     int j = 0;  /* index in unpacked array */
-    while (i < 144) {
+    while (i < 156) {
       int  count = packed.charAt(i++);
       char value = packed.charAt(i++);
       do map[j++] = value; while (--count > 0);
@@ -715,216 +708,21 @@ class Yylex implements java_cup.runtime.Scanner {
             switch (zzLexicalState) {
             case YYINITIAL: {
               System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: <<EOF>>");
-              System.out.println("action [274] { Yytoken token = new Yytoken(29, yytext(), yyline, yychar, yychar + 5, \"<EOF>\");"+ZZ_NL+"    tabelaSimbolos.imprimirTabela();"+ZZ_NL+"    return token; }");
-              Yytoken token = new Yytoken(29, yytext(), yyline, yychar, yychar + 5, "<EOF>");
-    tabelaSimbolos.imprimirTabela();
-    return token;
+              System.out.println("action [436] { tabelaSimbolos.imprimirTabela();"+ZZ_NL+"    System.exit(0); }");
+              tabelaSimbolos.imprimirTabela();
+    System.exit(0);
             }  // fall though
-            case 89: break;
+            case 102: break;
             default:
-          { return new java_cup.runtime.Symbol(sym.EOF); }
+          { return new java_cup.runtime.Symbol(Sym.EOF); }
         }
       }
       else {
         switch (zzAction < 0 ? zzAction : ZZ_ACTION[zzAction]) {
           case 1: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [263] { Yytoken token = new Yytoken(29, yytext(), yyline, yychar, yychar + yylength(), \"Caractere\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(29, yytext(), yyline, yychar, yychar + yylength(), "Caractere");
-    if (!tabelaSimbolos.contemToken(token)) {
-        tabelaSimbolos.adicionarEntrada(token);
-    }
-    return token;
-            } 
-            // fall through
-          case 31: break;
-          case 2: 
-            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [236] { // Ignorar espaços em branco e quebras de linha }");
-            { // Ignorar espaços em branco e quebras de linha
-            } 
-            // fall through
-          case 32: break;
-          case 3: 
-            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [196] { Yytoken token = new Yytoken(20, yytext(), yyline, yychar, yychar + yylength(), \"Identifier\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(20, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
-    if (!tabelaSimbolos.contemToken(token)) {
-        tabelaSimbolos.adicionarEntrada(token);
-    }
-    return token;
-            } 
-            // fall through
-          case 33: break;
-          case 4: 
-            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [240] { Yytoken token = new Yytoken(25, yytext(), yyline, yychar, yychar + yylength(), \"Interger\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(25, yytext(), yyline, yychar, yychar + yylength(), "Interger");
-    if (!tabelaSimbolos.contemToken(token)) {
-        tabelaSimbolos.adicionarEntrada(token);
-    }
-    return token;
-            } 
-            // fall through
-          case 34: break;
-          case 5: 
-            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [204] { Yytoken token = new Yytoken(21, yytext(), yyline, yychar, yychar + yylength(), \"Relop\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(21, yytext(), yyline, yychar, yychar + yylength(), "Relop");
-    if (!tabelaSimbolos.contemToken(token)) {
-        tabelaSimbolos.adicionarEntrada(token);
-    }
-    return token;
-            } 
-            // fall through
-          case 35: break;
-          case 6: 
-            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [212] { Yytoken token = new Yytoken(22, yytext(), yyline, yychar, yychar + yylength(), \"Addop\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(22, yytext(), yyline, yychar, yychar + yylength(), "Addop");
-    if (!tabelaSimbolos.contemToken(token)) {
-        tabelaSimbolos.adicionarEntrada(token);
-    }
-    return token;
-            } 
-            // fall through
-          case 36: break;
-          case 7: 
-            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [220] { Yytoken token = new Yytoken(23, yytext(), yyline, yychar, yychar + yylength(), \"Mulop\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(23, yytext(), yyline, yychar, yychar + yylength(), "Mulop");
-    if (!tabelaSimbolos.contemToken(token)) {
-        tabelaSimbolos.adicionarEntrada(token);
-    }
-    return token;
-            } 
-            // fall through
-          case 37: break;
-          case 8: 
-            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [187] { Yytoken token = new Yytoken(19, yytext(), yyline, yychar, yychar + 1, \"Comentario / Mod\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(19, yytext(), yyline, yychar, yychar + 1, "Comentario / Mod");
-    if (!tabelaSimbolos.contemToken(token)) {
-        tabelaSimbolos.adicionarEntrada(token);
-    }
-    return token;
-            } 
-            // fall through
-          case 38: break;
-          case 9: 
-            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [228] { Yytoken token = new Yytoken(24, yytext(), yyline, yychar, yychar + yylength(), \"Shiftop\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(24, yytext(), yyline, yychar, yychar + yylength(), "Shiftop");
-    if (!tabelaSimbolos.contemToken(token)) {
-        tabelaSimbolos.adicionarEntrada(token);
-    }
-    return token;
-            } 
-            // fall through
-          case 39: break;
-          case 10: 
-            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [155] { Yytoken token = new Yytoken(15, yytext(), yyline, yychar, yychar + 2, \"Palavra reservada: or\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(15, yytext(), yyline, yychar, yychar + 2, "Palavra reservada: or");
-    if (!tabelaSimbolos.contemToken(token)) {
-        tabelaSimbolos.adicionarEntrada(token);
-    }
-    return token;
-            } 
-            // fall through
-          case 40: break;
-          case 11: 
-            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [115] { Yytoken token = new Yytoken(10, yytext(), yyline, yychar, yychar + 2, \"Palavra reservada: do\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(10, yytext(), yyline, yychar, yychar + 2, "Palavra reservada: do");
-    if (!tabelaSimbolos.contemToken(token)) {
-        tabelaSimbolos.adicionarEntrada(token);
-    }
-    return token;
-            } 
-            // fall through
-          case 41: break;
-          case 12: 
-            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [256] { Yytoken token = new Yytoken(27, yytext(), yyline, yychar, yychar + 2, \"Assing_op\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(27, yytext(), yyline, yychar, yychar + 2, "Assing_op");
-    if (!tabelaSimbolos.contemToken(token)) {
-        tabelaSimbolos.adicionarEntrada(token);
-    }
-    return token;
-            } 
-            // fall through
-          case 42: break;
-          case 13: 
-            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [75] { Yytoken token = new Yytoken(5, yytext(), yyline, yychar, yychar + 2, \"Palavra reservada: if\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(5, yytext(), yyline, yychar, yychar + 2, "Palavra reservada: if");
-    if (!tabelaSimbolos.contemToken(token)) {
-        tabelaSimbolos.adicionarEntrada(token);
-    }
-    return token;
-            } 
-            // fall through
-          case 43: break;
-          case 14: 
-            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [123] { Yytoken token = new Yytoken(11, yytext(), yyline, yychar, yychar + 2, \"Palavra reservada: to\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(11, yytext(), yyline, yychar, yychar + 2, "Palavra reservada: to");
-    if (!tabelaSimbolos.contemToken(token)) {
-        tabelaSimbolos.adicionarEntrada(token);
-    }
-    return token;
-            } 
-            // fall through
-          case 44: break;
-          case 15: 
-            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [248] { Yytoken token = new Yytoken(26, yytext(), yyline, yychar, yychar + yylength(), \"Decimal\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(26, yytext(), yyline, yychar, yychar + yylength(), "Decimal");
-    if (!tabelaSimbolos.contemToken(token)) {
-        tabelaSimbolos.adicionarEntrada(token);
-    }
-    return token;
-            } 
-            // fall through
-          case 45: break;
-          case 16: 
-            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [171] { Yytoken token = new Yytoken(17, yytext(), yyline, yychar, yychar + 3, \"Palavra reservada: mod\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(17, yytext(), yyline, yychar, yychar + 3, "Palavra reservada: mod");
-    if (!tabelaSimbolos.contemToken(token)) {
-        tabelaSimbolos.adicionarEntrada(token);
-    }
-    return token;
-            } 
-            // fall through
-          case 46: break;
-          case 17: 
-            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [163] { Yytoken token = new Yytoken(16, yytext(), yyline, yychar, yychar + 3, \"Palavra reservada: and\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(16, yytext(), yyline, yychar, yychar + 3, "Palavra reservada: and");
-    if (!tabelaSimbolos.contemToken(token)) {
-        tabelaSimbolos.adicionarEntrada(token);
-    }
-    return token;
-            } 
-            // fall through
-          case 47: break;
-          case 18: 
-            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [179] { Yytoken token = new Yytoken(18, yytext(), yyline, yychar, yychar + 3, \"Palavra reservada: not\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(18, yytext(), yyline, yychar, yychar + 3, "Palavra reservada: not");
-    if (!tabelaSimbolos.contemToken(token)) {
-        tabelaSimbolos.adicionarEntrada(token);
-    }
-    return token;
-            } 
-            // fall through
-          case 48: break;
-          case 19: 
-            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [107] { Yytoken token = new Yytoken(9, yytext(), yyline, yychar, yychar + 3, \"Palavra reservada: end\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(9, yytext(), yyline, yychar, yychar + 3, "Palavra reservada: end");
+            System.out.println("action [418] { Yytoken token = new Yytoken(Sym.CARACTERE, yytext(), yyline, yychar, yychar + yylength(), \"Caractere\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.CARACTERE, yytext(), yyline, yychar, yychar + yylength(), "Caractere");
     if (!tabelaSimbolos.contemToken(token)) {
         tabelaSimbolos.adicionarEntrada(token);
     }
@@ -932,21 +730,17 @@ class Yylex implements java_cup.runtime.Scanner {
             } 
             // fall through
           case 49: break;
-          case 20: 
+          case 2: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [99] { Yytoken token = new Yytoken(8, yytext(), yyline, yychar, yychar + 3, \"Palavra reservada: for\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(8, yytext(), yyline, yychar, yychar + 3, "Palavra reservada: for");
-    if (!tabelaSimbolos.contemToken(token)) {
-        tabelaSimbolos.adicionarEntrada(token);
-    }
-    return token;
+            System.out.println("action [391] { // Ignorar espaços em branco e quebras de linha }");
+            { // Ignorar espaços em branco e quebras de linha
             } 
             // fall through
           case 50: break;
-          case 21: 
+          case 3: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [139] { Yytoken token = new Yytoken(13, yytext(), yyline, yychar, yychar + 4, \"Palavra reservada: read\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(13, yytext(), yyline, yychar, yychar + 4, "Palavra reservada: read");
+            System.out.println("action [383] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), \"Identifier\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
     if (!tabelaSimbolos.contemToken(token)) {
         tabelaSimbolos.adicionarEntrada(token);
     }
@@ -954,10 +748,10 @@ class Yylex implements java_cup.runtime.Scanner {
             } 
             // fall through
           case 51: break;
-          case 22: 
+          case 4: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [91] { Yytoken token = new Yytoken(7, yytext(), yyline, yychar, yychar + 4, \"Palavra reservada: else\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(7, yytext(), yyline, yychar, yychar + 4, "Palavra reservada: else");
+            System.out.println("action [395] { Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline, yychar, yychar + yylength(), \"Interger\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Interger");
     if (!tabelaSimbolos.contemToken(token)) {
         tabelaSimbolos.adicionarEntrada(token);
     }
@@ -965,10 +759,11 @@ class Yylex implements java_cup.runtime.Scanner {
             } 
             // fall through
           case 52: break;
-          case 23: 
+          case 5: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [83] { Yytoken token = new Yytoken(6, yytext(), yyline, yychar, yychar + 4, \"Palavra reservada: then\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(6, yytext(), yyline, yychar, yychar + 4, "Palavra reservada: then");
+            System.out.println("action [354] { /* Crie um token correspondente ao símbolo \":\" */"+ZZ_NL+"    Yytoken token = new Yytoken(Sym.COLON, yytext(), yyline, yychar, yychar + 1, \"Colon\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { /* Crie um token correspondente ao símbolo ":" */
+    Yytoken token = new Yytoken(Sym.COLON, yytext(), yyline, yychar, yychar + 1, "Colon");
     if (!tabelaSimbolos.contemToken(token)) {
         tabelaSimbolos.adicionarEntrada(token);
     }
@@ -976,10 +771,10 @@ class Yylex implements java_cup.runtime.Scanner {
             } 
             // fall through
           case 53: break;
-          case 24: 
+          case 6: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [51] { Yytoken token = new Yytoken(2, yytext(), yyline, yychar, yychar + 5, \"Palavra reservada: begin\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(2, yytext(), yyline, yychar, yychar + 5, "Palavra reservada: begin");
+            System.out.println("action [230] { Yytoken token = new Yytoken(Sym.EQ, yytext(), yyline, yychar, yychar + 1, \"EQ\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.EQ, yytext(), yyline, yychar, yychar + 1, "EQ");
     if (!tabelaSimbolos.contemToken(token)) {
         tabelaSimbolos.adicionarEntrada(token);
     }
@@ -987,21 +782,17 @@ class Yylex implements java_cup.runtime.Scanner {
             } 
             // fall through
           case 54: break;
-          case 25: 
+          case 7: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [147] { Yytoken token = new Yytoken(14, yytext(), yyline, yychar, yychar + 5, \"Palavra reservada: write\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(14, yytext(), yyline, yychar, yychar + 5, "Palavra reservada: write");
-    if (!tabelaSimbolos.contemToken(token)) {
-        tabelaSimbolos.adicionarEntrada(token);
-    }
-    return token;
+            System.out.println("action [192] {  }");
+            { 
             } 
             // fall through
           case 55: break;
-          case 26: 
+          case 8: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [131] { Yytoken token = new Yytoken(12, yytext(), yyline, yychar, yychar + 5, \"Palavra reservada: while\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(12, yytext(), yyline, yychar, yychar + 5, "Palavra reservada: while");
+            System.out.println("action [197] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yychar, yychar + 1, \"Semicolon\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yychar, yychar + 1, "Semicolon");
     if (!tabelaSimbolos.contemToken(token)) {
         tabelaSimbolos.adicionarEntrada(token);
     }
@@ -1009,10 +800,10 @@ class Yylex implements java_cup.runtime.Scanner {
             } 
             // fall through
           case 56: break;
-          case 27: 
+          case 9: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [43] { Yytoken token = new Yytoken(1, yytext(), yyline, yychar, yychar + 7, \"Palavra reservada: declare\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(1, yytext(), yyline, yychar, yychar + 7, "Palavra reservada: declare");
+            System.out.println("action [204] { Yytoken token = new Yytoken(Sym.COMMA, yytext(), yyline, yychar, yychar + 1, \"Comma\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.COMMA, yytext(), yyline, yychar, yychar + 1, "Comma");
     if (!tabelaSimbolos.contemToken(token)) {
         tabelaSimbolos.adicionarEntrada(token);
     }
@@ -1020,10 +811,10 @@ class Yylex implements java_cup.runtime.Scanner {
             } 
             // fall through
           case 57: break;
-          case 28: 
+          case 10: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [67] { Yytoken token = new Yytoken(4, yytext(), yyline, yychar, yychar + 7, \"Palavra reservada: decimal\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(4, yytext(), yyline, yychar, yychar + 7, "Palavra reservada: decimal");
+            System.out.println("action [212] { Yytoken token = new Yytoken(Sym.RIGHT_PAREN, yytext(), yyline, yychar, yychar + 1, \"Right Parenthesis\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.RIGHT_PAREN, yytext(), yyline, yychar, yychar + 1, "Right Parenthesis");
     if (!tabelaSimbolos.contemToken(token)) {
         tabelaSimbolos.adicionarEntrada(token);
     }
@@ -1031,10 +822,10 @@ class Yylex implements java_cup.runtime.Scanner {
             } 
             // fall through
           case 58: break;
-          case 29: 
+          case 11: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [35] { Yytoken token = new Yytoken(0, yytext(), yyline, yychar, yychar + 7, \"Palavra reservada: program\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(0, yytext(), yyline, yychar, yychar + 7, "Palavra reservada: program");
+            System.out.println("action [220] { Yytoken token = new Yytoken(Sym.LEFT_PAREN, yytext(), yyline, yychar, yychar + 1, \"Left Parenthesis\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.LEFT_PAREN, yytext(), yyline, yychar, yychar + 1, "Left Parenthesis");
     if (!tabelaSimbolos.contemToken(token)) {
         tabelaSimbolos.adicionarEntrada(token);
     }
@@ -1042,10 +833,10 @@ class Yylex implements java_cup.runtime.Scanner {
             } 
             // fall through
           case 59: break;
-          case 30: 
+          case 12: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [59] { Yytoken token = new Yytoken(3, yytext(), yyline, yychar, yychar + 7, \"Palavra reservada: integer\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(3, yytext(), yyline, yychar, yychar + 7, "Palavra reservada: integer");
+            System.out.println("action [237] { Yytoken token = new Yytoken(Sym.PLUS, yytext(), yyline, yychar, yychar + 1, \"Plus\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.PLUS, yytext(), yyline, yychar, yychar + 1, "Plus");
     if (!tabelaSimbolos.contemToken(token)) {
         tabelaSimbolos.adicionarEntrada(token);
     }
@@ -1053,6 +844,405 @@ class Yylex implements java_cup.runtime.Scanner {
             } 
             // fall through
           case 60: break;
+          case 13: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [245] { Yytoken token = new Yytoken(Sym.MINUS, yytext(), yyline, yychar, yychar + 1, \"Minus\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.MINUS, yytext(), yyline, yychar, yychar + 1, "Minus");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 61: break;
+          case 14: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [253] { Yytoken token = new Yytoken(Sym.GT, yytext(), yyline, yychar, yychar + 1, \"GT\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.GT, yytext(), yyline, yychar, yychar + 1, "GT");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 62: break;
+          case 15: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [269] { Yytoken token = new Yytoken(Sym.LT, yytext(), yyline, yychar, yychar + 1, \"LT\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.LT, yytext(), yyline, yychar, yychar + 1, "LT");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 63: break;
+          case 16: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [325] { Yytoken token = new Yytoken(Sym.MULT, yytext(), yyline, yychar, yychar + 1, \"Mult\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.MULT, yytext(), yyline, yychar, yychar + 1, "Mult");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 64: break;
+          case 17: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [333] { Yytoken token = new Yytoken(Sym.DIV, yytext(), yyline, yychar, yychar + 1, \"Div\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.DIV, yytext(), yyline, yychar, yychar + 1, "Div");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 65: break;
+          case 18: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [345] { /* Crie um token correspondente ao símbolo \"?\" */"+ZZ_NL+"    Yytoken token = new Yytoken(Sym.QUESTION_MARK, yytext(), yyline, yychar, yychar + 1, \"Question Mark\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { /* Crie um token correspondente ao símbolo "?" */
+    Yytoken token = new Yytoken(Sym.QUESTION_MARK, yytext(), yyline, yychar, yychar + 1, "Question Mark");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 66: break;
+          case 19: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [362] { /* Crie um token correspondente ao símbolo \"`\" */"+ZZ_NL+"    Yytoken token = new Yytoken(Sym.BACKTICK, yytext(), yyline, yychar, yychar + 1, \"Backtick\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { /* Crie um token correspondente ao símbolo "`" */
+    Yytoken token = new Yytoken(Sym.BACKTICK, yytext(), yyline, yychar, yychar + 1, "Backtick");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 67: break;
+          case 20: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [371] { /* Crie um token correspondente ao símbolo \"´\" */"+ZZ_NL+"    Yytoken token = new Yytoken(Sym.ACUTE_ACCENT, yytext(), yyline, yychar, yychar + 1, \"Acute Accent\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { /* Crie um token correspondente ao símbolo "´" */
+    Yytoken token = new Yytoken(Sym.ACUTE_ACCENT, yytext(), yyline, yychar, yychar + 1, "Acute Accent");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 68: break;
+          case 21: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [411] { Yytoken token = new Yytoken(Sym.ASSIGN_OP, yytext(), yyline, yychar, yychar + 2, \"ASSIGN_OP\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.ASSIGN_OP, yytext(), yyline, yychar, yychar + 2, "ASSIGN_OP");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 69: break;
+          case 22: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [160] { Yytoken token = new Yytoken(Sym.OR, yytext(), yyline, yychar, yychar + 2, \"Palavra reservada: or\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.OR, yytext(), yyline, yychar, yychar + 2, "Palavra reservada: or");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 70: break;
+          case 23: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [120] { Yytoken token = new Yytoken(Sym.DO, yytext(), yyline, yychar, yychar + 2, \"Palavra reservada: do\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.DO, yytext(), yyline, yychar, yychar + 2, "Palavra reservada: do");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 71: break;
+          case 24: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [80] { Yytoken token = new Yytoken(Sym.IF, yytext(), yyline, yychar, yychar + 2, \"Palavra reservada: if\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.IF, yytext(), yyline, yychar, yychar + 2, "Palavra reservada: if");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 72: break;
+          case 25: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [128] { Yytoken token = new Yytoken(Sym.TO, yytext(), yyline, yychar, yychar + 2, \"Palavra reservada: to\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.TO, yytext(), yyline, yychar, yychar + 2, "Palavra reservada: to");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 73: break;
+          case 26: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [261] { Yytoken token = new Yytoken(Sym.GE, yytext(), yyline, yychar, yychar + 2, \"GE\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.GE, yytext(), yyline, yychar, yychar + 2, "GE");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 74: break;
+          case 27: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [301] { Yytoken token = new Yytoken(Sym.DGT, yytext(), yyline, yychar, yychar + 2, \"DGT\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.DGT, yytext(), yyline, yychar, yychar + 2, "DGT");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 75: break;
+          case 28: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [277] { Yytoken token = new Yytoken(Sym.LE, yytext(), yyline, yychar, yychar + 2, \"LE\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.LE, yytext(), yyline, yychar, yychar + 2, "LE");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 76: break;
+          case 29: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [285] { Yytoken token = new Yytoken(Sym.NE, yytext(), yyline, yychar, yychar + 2, \"NE\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.NE, yytext(), yyline, yychar, yychar + 2, "NE");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 77: break;
+          case 30: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [293] { Yytoken token = new Yytoken(Sym.DLT, yytext(), yyline, yychar, yychar + 2, \"DLT\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.DLT, yytext(), yyline, yychar, yychar + 2, "DLT");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 78: break;
+          case 31: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [403] { Yytoken token = new Yytoken(Sym.DECIMALCONSTANT, yytext(), yyline, yychar, yychar + yylength(), \"Decimal\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.DECIMALCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Decimal");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 79: break;
+          case 32: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [168] { Yytoken token = new Yytoken(Sym.AND, yytext(), yyline, yychar, yychar + 3, \"Palavra reservada: and\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.AND, yytext(), yyline, yychar, yychar + 3, "Palavra reservada: and");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 80: break;
+          case 33: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [176] { Yytoken token = new Yytoken(Sym.MOD, yytext(), yyline, yychar, yychar + 3, \"Palavra reservada: mod\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.MOD, yytext(), yyline, yychar, yychar + 3, "Palavra reservada: mod");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 81: break;
+          case 34: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [112] { Yytoken token = new Yytoken(Sym.END, yytext(), yyline, yychar, yychar + 3, \"Palavra reservada: end\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.END, yytext(), yyline, yychar, yychar + 3, "Palavra reservada: end");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 82: break;
+          case 35: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [184] { Yytoken token = new Yytoken(Sym.NOT, yytext(), yyline, yychar, yychar + 3, \"Palavra reservada: not\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.NOT, yytext(), yyline, yychar, yychar + 3, "Palavra reservada: not");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 83: break;
+          case 36: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [104] { Yytoken token = new Yytoken(Sym.FOR, yytext(), yyline, yychar, yychar + 3, \"Palavra reservada: for\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.FOR, yytext(), yyline, yychar, yychar + 3, "Palavra reservada: for");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 84: break;
+          case 37: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [317] { Yytoken token = new Yytoken(Sym.TGT, yytext(), yyline, yychar, yychar + 3, \"TGT\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.TGT, yytext(), yyline, yychar, yychar + 3, "TGT");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 85: break;
+          case 38: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [309] { Yytoken token = new Yytoken(Sym.TLT, yytext(), yyline, yychar, yychar + 3, \"TLT\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.TLT, yytext(), yyline, yychar, yychar + 3, "TLT");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 86: break;
+          case 39: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [144] { Yytoken token = new Yytoken(Sym.READ, yytext(), yyline, yychar, yychar + 4, \"Palavra reservada: read\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.READ, yytext(), yyline, yychar, yychar + 4, "Palavra reservada: read");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 87: break;
+          case 40: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [96] { Yytoken token = new Yytoken(Sym.ELSE, yytext(), yyline, yychar, yychar + 4, \"Palavra reservada: else\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.ELSE, yytext(), yyline, yychar, yychar + 4, "Palavra reservada: else");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 88: break;
+          case 41: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [88] { Yytoken token = new Yytoken(Sym.THEN, yytext(), yyline, yychar, yychar + 4, \"Palavra reservada: then\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.THEN, yytext(), yyline, yychar, yychar + 4, "Palavra reservada: then");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 89: break;
+          case 42: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [56] { Yytoken token = new Yytoken(Sym.BEGIN, yytext(), yyline, yychar, yychar + 5, \"Palavra reservada: begin\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.BEGIN, yytext(), yyline, yychar, yychar + 5, "Palavra reservada: begin");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 90: break;
+          case 43: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [152] { Yytoken token = new Yytoken(Sym.WRITE, yytext(), yyline, yychar, yychar + 5, \"Palavra reservada: write\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.WRITE, yytext(), yyline, yychar, yychar + 5, "Palavra reservada: write");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 91: break;
+          case 44: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [136] { Yytoken token = new Yytoken(Sym.WHILE, yytext(), yyline, yychar, yychar + 5, \"Palavra reservada: while\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.WHILE, yytext(), yyline, yychar, yychar + 5, "Palavra reservada: while");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 92: break;
+          case 45: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [40] { Yytoken token = new Yytoken(Sym.PROGRAM, yytext(), yyline, yychar, yychar + 7, \"Palavra reservada: program\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.PROGRAM, yytext(), yyline, yychar, yychar + 7, "Palavra reservada: program");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 93: break;
+          case 46: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [48] { Yytoken token = new Yytoken(Sym.DECLARE, yytext(), yyline, yychar, yychar + 7, \"Palavra reservada: declare\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.DECLARE, yytext(), yyline, yychar, yychar + 7, "Palavra reservada: declare");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 94: break;
+          case 47: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [72] { Yytoken token = new Yytoken(Sym.DECIMAL, yytext(), yyline, yychar, yychar + 7, \"Palavra reservada: decimal\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.DECIMAL, yytext(), yyline, yychar, yychar + 7, "Palavra reservada: decimal");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 95: break;
+          case 48: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [64] { Yytoken token = new Yytoken(Sym.INTEGER, yytext(), yyline, yychar, yychar + 7, \"Palavra reservada: integer\");"+ZZ_NL+"    if (!tabelaSimbolos.contemToken(token)) {"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    }"+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.INTEGER, yytext(), yyline, yychar, yychar + 7, "Palavra reservada: integer");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token;
+            } 
+            // fall through
+          case 96: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }

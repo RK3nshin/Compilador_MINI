@@ -1,0 +1,706 @@
+line: 1 char: 0 match: --program--
+action [40] { Yytoken token = new Yytoken(Sym.PROGRAM, yytext(), yyline, yychar, yychar + 7, "Palavra reservada: program");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: program
+Index: 0
+Name: Palavra reservada: program
+Line: 0
+Begin: 0
+End: 7
+line: 1 char: 7 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 1 char: 8 match: --teste2--
+action [383] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: teste2
+Index: 0
+Name: Identifier
+Line: 0
+Begin: 8
+End: 14
+line: 1 char: 14 match: --\u000A--
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 2 char: 15 match: --declarando--
+action [383] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: declarando
+Index: 0
+Name: Identifier
+Line: 1
+Begin: 15
+End: 25
+line: 2 char: 25 match: --\u000A--
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 3 char: 26 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 3 char: 27 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 3 char: 28 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 3 char: 29 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 3 char: 30 match: --integer--
+action [64] { Yytoken token = new Yytoken(Sym.INTEGER, yytext(), yyline, yychar, yychar + 7, "Palavra reservada: integer");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: integer
+Index: 0
+Name: Palavra reservada: integer
+Line: 2
+Begin: 30
+End: 37
+line: 3 char: 37 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 3 char: 38 match: --a--
+action [383] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: a
+Index: 0
+Name: Identifier
+Line: 2
+Begin: 38
+End: 39
+line: 3 char: 39 match: --;--
+action [197] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yychar, yychar + 1, "Semicolon");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: ;
+Index: 0
+Name: Semicolon
+Line: 2
+Begin: 39
+End: 40
+line: 3 char: 40 match: --\u000A--
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 4 char: 41 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 4 char: 42 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 4 char: 43 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 4 char: 44 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 4 char: 45 match: --integer--
+action [64] { Yytoken token = new Yytoken(Sym.INTEGER, yytext(), yyline, yychar, yychar + 7, "Palavra reservada: integer");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: integer
+Index: 0
+Name: Palavra reservada: integer
+Line: 3
+Begin: 45
+End: 52
+line: 4 char: 52 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 4 char: 53 match: --b--
+action [383] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: b
+Index: 0
+Name: Identifier
+Line: 3
+Begin: 53
+End: 54
+line: 4 char: 54 match: --;--
+action [197] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yychar, yychar + 1, "Semicolon");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: ;
+Index: 0
+Name: Semicolon
+Line: 3
+Begin: 54
+End: 55
+line: 4 char: 55 match: --\u000A--
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 5 char: 56 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 5 char: 57 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 5 char: 58 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 5 char: 59 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 5 char: 60 match: --integer--
+action [64] { Yytoken token = new Yytoken(Sym.INTEGER, yytext(), yyline, yychar, yychar + 7, "Palavra reservada: integer");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: integer
+Index: 0
+Name: Palavra reservada: integer
+Line: 4
+Begin: 60
+End: 67
+line: 5 char: 67 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 5 char: 68 match: --c--
+action [383] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: c
+Index: 0
+Name: Identifier
+Line: 4
+Begin: 68
+End: 69
+line: 5 char: 69 match: --;--
+action [197] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yychar, yychar + 1, "Semicolon");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: ;
+Index: 0
+Name: Semicolon
+Line: 4
+Begin: 69
+End: 70
+line: 5 char: 70 match: --\u000A--
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 6 char: 71 match: --begin--
+action [56] { Yytoken token = new Yytoken(Sym.BEGIN, yytext(), yyline, yychar, yychar + 5, "Palavra reservada: begin");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: begin
+Index: 0
+Name: Palavra reservada: begin
+Line: 5
+Begin: 71
+End: 76
+line: 6 char: 76 match: --\u000A--
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 7 char: 77 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 7 char: 78 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 7 char: 79 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 7 char: 80 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 7 char: 81 match: --read--
+action [144] { Yytoken token = new Yytoken(Sym.READ, yytext(), yyline, yychar, yychar + 4, "Palavra reservada: read");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: read
+Index: 0
+Name: Palavra reservada: read
+Line: 6
+Begin: 81
+End: 85
+line: 7 char: 85 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 7 char: 86 match: --(--
+action [220] { Yytoken token = new Yytoken(Sym.LEFT_PAREN, yytext(), yyline, yychar, yychar + 1, "Left Parenthesis");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: (
+Index: 0
+Name: Left Parenthesis
+Line: 6
+Begin: 86
+End: 87
+line: 7 char: 87 match: --a--
+action [383] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: a
+Index: 0
+Name: Identifier
+Line: 6
+Begin: 87
+End: 88
+line: 7 char: 88 match: --)--
+action [212] { Yytoken token = new Yytoken(Sym.RIGHT_PAREN, yytext(), yyline, yychar, yychar + 1, "Right Parenthesis");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: )
+Index: 0
+Name: Right Parenthesis
+Line: 6
+Begin: 88
+End: 89
+line: 7 char: 89 match: --;--
+action [197] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yychar, yychar + 1, "Semicolon");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: ;
+Index: 0
+Name: Semicolon
+Line: 6
+Begin: 89
+End: 90
+line: 7 char: 90 match: --\u000A--
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 8 char: 91 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 8 char: 92 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 8 char: 93 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 8 char: 94 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 8 char: 95 match: --b--
+action [383] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: b
+Index: 0
+Name: Identifier
+Line: 7
+Begin: 95
+End: 96
+line: 8 char: 96 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 8 char: 97 match: --:=--
+action [411] { Yytoken token = new Yytoken(Sym.ASSIGN_OP, yytext(), yyline, yychar, yychar + 2, "ASSIGN_OP");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: :=
+Index: 0
+Name: ASSIGN_OP
+Line: 7
+Begin: 97
+End: 99
+line: 8 char: 99 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 8 char: 100 match: --a--
+action [383] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: a
+Index: 0
+Name: Identifier
+Line: 7
+Begin: 100
+End: 101
+line: 8 char: 101 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 8 char: 102 match: --*--
+action [325] { Yytoken token = new Yytoken(Sym.MULT, yytext(), yyline, yychar, yychar + 1, "Mult");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: *
+Index: 0
+Name: Mult
+Line: 7
+Begin: 102
+End: 103
+line: 8 char: 103 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 8 char: 104 match: --a--
+action [383] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: a
+Index: 0
+Name: Identifier
+Line: 7
+Begin: 104
+End: 105
+line: 8 char: 105 match: --;--
+action [197] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yychar, yychar + 1, "Semicolon");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: ;
+Index: 0
+Name: Semicolon
+Line: 7
+Begin: 105
+End: 106
+line: 8 char: 106 match: --\u000A--
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 9 char: 107 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 9 char: 108 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 9 char: 109 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 9 char: 110 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 9 char: 111 match: --c--
+action [383] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: c
+Index: 0
+Name: Identifier
+Line: 8
+Begin: 111
+End: 112
+line: 9 char: 112 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 9 char: 113 match: --:=--
+action [411] { Yytoken token = new Yytoken(Sym.ASSIGN_OP, yytext(), yyline, yychar, yychar + 2, "ASSIGN_OP");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: :=
+Index: 0
+Name: ASSIGN_OP
+Line: 8
+Begin: 113
+End: 115
+line: 9 char: 115 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 9 char: 116 match: --b--
+action [383] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: b
+Index: 0
+Name: Identifier
+Line: 8
+Begin: 116
+End: 117
+line: 9 char: 117 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 9 char: 118 match: --+--
+action [237] { Yytoken token = new Yytoken(Sym.PLUS, yytext(), yyline, yychar, yychar + 1, "Plus");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: +
+Index: 0
+Name: Plus
+Line: 8
+Begin: 118
+End: 119
+line: 9 char: 119 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 9 char: 120 match: --a--
+action [383] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: a
+Index: 0
+Name: Identifier
+Line: 8
+Begin: 120
+End: 121
+line: 9 char: 121 match: --/--
+action [333] { Yytoken token = new Yytoken(Sym.DIV, yytext(), yyline, yychar, yychar + 1, "Div");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: /
+Index: 0
+Name: Div
+Line: 8
+Begin: 121
+End: 122
+line: 9 char: 122 match: --2--
+action [395] { Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Interger");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: 2
+Index: 0
+Name: Interger
+Line: 8
+Begin: 122
+End: 123
+line: 9 char: 123 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 9 char: 124 match: --*--
+action [325] { Yytoken token = new Yytoken(Sym.MULT, yytext(), yyline, yychar, yychar + 1, "Mult");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: *
+Index: 0
+Name: Mult
+Line: 8
+Begin: 124
+End: 125
+line: 9 char: 125 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 9 char: 126 match: --(--
+action [220] { Yytoken token = new Yytoken(Sym.LEFT_PAREN, yytext(), yyline, yychar, yychar + 1, "Left Parenthesis");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: (
+Index: 0
+Name: Left Parenthesis
+Line: 8
+Begin: 126
+End: 127
+line: 9 char: 127 match: --3--
+action [395] { Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Interger");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: 3
+Index: 0
+Name: Interger
+Line: 8
+Begin: 127
+End: 128
+line: 9 char: 128 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 9 char: 129 match: --+--
+action [237] { Yytoken token = new Yytoken(Sym.PLUS, yytext(), yyline, yychar, yychar + 1, "Plus");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: +
+Index: 0
+Name: Plus
+Line: 8
+Begin: 129
+End: 130
+line: 9 char: 130 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 9 char: 131 match: --5--
+action [395] { Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Interger");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: 5
+Index: 0
+Name: Interger
+Line: 8
+Begin: 131
+End: 132
+line: 9 char: 132 match: --)--
+action [212] { Yytoken token = new Yytoken(Sym.RIGHT_PAREN, yytext(), yyline, yychar, yychar + 1, "Right Parenthesis");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: )
+Index: 0
+Name: Right Parenthesis
+Line: 8
+Begin: 132
+End: 133
+line: 9 char: 133 match: --;--
+action [197] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yychar, yychar + 1, "Semicolon");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: ;
+Index: 0
+Name: Semicolon
+Line: 8
+Begin: 133
+End: 134
+line: 9 char: 134 match: --\u000A--
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 10 char: 135 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 10 char: 136 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 10 char: 137 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 10 char: 138 match: -- --
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 10 char: 139 match: --write--
+action [152] { Yytoken token = new Yytoken(Sym.WRITE, yytext(), yyline, yychar, yychar + 5, "Palavra reservada: write");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: write
+Index: 0
+Name: Palavra reservada: write
+Line: 9
+Begin: 139
+End: 144
+line: 10 char: 144 match: --(--
+action [220] { Yytoken token = new Yytoken(Sym.LEFT_PAREN, yytext(), yyline, yychar, yychar + 1, "Left Parenthesis");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: (
+Index: 0
+Name: Left Parenthesis
+Line: 9
+Begin: 144
+End: 145
+line: 10 char: 145 match: --c--
+action [383] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: c
+Index: 0
+Name: Identifier
+Line: 9
+Begin: 145
+End: 146
+line: 10 char: 146 match: --)--
+action [212] { Yytoken token = new Yytoken(Sym.RIGHT_PAREN, yytext(), yyline, yychar, yychar + 1, "Right Parenthesis");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: )
+Index: 0
+Name: Right Parenthesis
+Line: 9
+Begin: 146
+End: 147
+line: 10 char: 147 match: --\u000A--
+action [391] { // Ignorar espaços em branco e quebras de linha }
+line: 11 char: 148 match: --end--
+action [112] { Yytoken token = new Yytoken(Sym.END, yytext(), yyline, yychar, yychar + 3, "Palavra reservada: end");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: end
+Index: 0
+Name: Palavra reservada: end
+Line: 10
+Begin: 148
+End: 151
+line: 11 char: 151 match: --;--
+action [197] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yychar, yychar + 1, "Semicolon");
+    if (!tabelaSimbolos.contemToken(token)) {
+        tabelaSimbolos.adicionarEntrada(token);
+    }
+    return token; }
+lexema: ;
+Index: 0
+Name: Semicolon
+Line: 10
+Begin: 151
+End: 152
+line: 11 char: 152 match: <<EOF>>
+action [436] { tabelaSimbolos.imprimirTabela();
+    System.exit(0); }
+Tabela de Símbolos:
+ID: 0, Lexema: program, Nome: Palavra reservada: program, Index: 0
+ID: 1, Lexema: program, Nome: Palavra reservada: program, Index: 0
+ID: 2, Lexema: declare, Nome: Palavra reservada: declare, Index: 1
+ID: 3, Lexema: begin, Nome: Palavra reservada: begin, Index: 2
+ID: 4, Lexema: integer, Nome: Palavra reservada: integer, Index: 3
+ID: 5, Lexema: decimal, Nome: Palavra reservada: decimal, Index: 4
+ID: 6, Lexema: if, Nome: Palavra reservada: if, Index: 5
+ID: 7, Lexema: then, Nome: Palavra reservada: then, Index: 6
+ID: 8, Lexema: else, Nome: Palavra reservada: else, Index: 7
+ID: 9, Lexema: for, Nome: Palavra reservada: for, Index: 8
+ID: 10, Lexema: end, Nome: Palavra reservada: end, Index: 9
+ID: 11, Lexema: do, Nome: Palavra reservada: do, Index: 10
+ID: 12, Lexema: to, Nome: Palavra reservada: to, Index: 11
+ID: 13, Lexema: while, Nome: Palavra reservada: while, Index: 12
+ID: 14, Lexema: read, Nome: Palavra reservada: read, Index: 13
+ID: 15, Lexema: write, Nome: Palavra reservada: write, Index: 14
+ID: 16, Lexema: or, Nome: Palavra reservada: or, Index: 15
+ID: 17, Lexema: and, Nome: Palavra reservada: and, Index: 16
+ID: 18, Lexema: mod, Nome: Palavra reservada: mod, Index: 17
+ID: 19, Lexema: not, Nome: Palavra reservada: not, Index: 18
+ID: 20, Lexema: program, Nome: Palavra reservada: program, Index: 0
+ID: 21, Lexema: teste2, Nome: Identifier, Index: 0
+ID: 22, Lexema: declarando, Nome: Identifier, Index: 0
+ID: 23, Lexema: integer, Nome: Palavra reservada: integer, Index: 0
+ID: 24, Lexema: a, Nome: Identifier, Index: 0
+ID: 25, Lexema: ;, Nome: Semicolon, Index: 0
+ID: 26, Lexema: integer, Nome: Palavra reservada: integer, Index: 0
+ID: 27, Lexema: b, Nome: Identifier, Index: 0
+ID: 28, Lexema: ;, Nome: Semicolon, Index: 0
+ID: 29, Lexema: integer, Nome: Palavra reservada: integer, Index: 0
+ID: 30, Lexema: c, Nome: Identifier, Index: 0
+ID: 31, Lexema: ;, Nome: Semicolon, Index: 0
+ID: 32, Lexema: begin, Nome: Palavra reservada: begin, Index: 0
+ID: 33, Lexema: read, Nome: Palavra reservada: read, Index: 0
+ID: 34, Lexema: (, Nome: Left Parenthesis, Index: 0
+ID: 35, Lexema: a, Nome: Identifier, Index: 0
+ID: 36, Lexema: ), Nome: Right Parenthesis, Index: 0
+ID: 37, Lexema: ;, Nome: Semicolon, Index: 0
+ID: 38, Lexema: b, Nome: Identifier, Index: 0
+ID: 39, Lexema: :=, Nome: ASSIGN_OP, Index: 0
+ID: 40, Lexema: a, Nome: Identifier, Index: 0
+ID: 41, Lexema: *, Nome: Mult, Index: 0
+ID: 42, Lexema: a, Nome: Identifier, Index: 0
+ID: 43, Lexema: ;, Nome: Semicolon, Index: 0
+ID: 44, Lexema: c, Nome: Identifier, Index: 0
+ID: 45, Lexema: :=, Nome: ASSIGN_OP, Index: 0
+ID: 46, Lexema: b, Nome: Identifier, Index: 0
+ID: 47, Lexema: +, Nome: Plus, Index: 0
+ID: 48, Lexema: a, Nome: Identifier, Index: 0
+ID: 49, Lexema: /, Nome: Div, Index: 0
+ID: 50, Lexema: 2, Nome: Interger, Index: 0
+ID: 51, Lexema: *, Nome: Mult, Index: 0
+ID: 52, Lexema: (, Nome: Left Parenthesis, Index: 0
+ID: 53, Lexema: 3, Nome: Interger, Index: 0
+ID: 54, Lexema: +, Nome: Plus, Index: 0
+ID: 55, Lexema: 5, Nome: Interger, Index: 0
+ID: 56, Lexema: ), Nome: Right Parenthesis, Index: 0
+ID: 57, Lexema: ;, Nome: Semicolon, Index: 0
+ID: 58, Lexema: write, Nome: Palavra reservada: write, Index: 0
+ID: 59, Lexema: (, Nome: Left Parenthesis, Index: 0
+ID: 60, Lexema: c, Nome: Identifier, Index: 0
+ID: 61, Lexema: ), Nome: Right Parenthesis, Index: 0
+ID: 62, Lexema: end, Nome: Palavra reservada: end, Index: 0
+ID: 63, Lexema: ;, Nome: Semicolon, Index: 0

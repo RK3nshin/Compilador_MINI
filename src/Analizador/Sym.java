@@ -6,45 +6,54 @@
 /** CUP generated class containing symbol constants. */
 public class Sym {
   /* terminals */
-  public static final int ASSIGN_OP = 29;
-  public static final int RIGHT_PAREN = 33;
-  public static final int RIGHT_SQUARE_BRACKET = 36;
-  public static final int COMMENT = 21;
+  public static final int ASSIGN_OP = 24;
+  public static final int RIGHT_PAREN = 28;
+  public static final int CARACTERE = 25;
+  public static final int DGT = 40;
+  public static final int MULT = 38;
+  public static final int GE = 37;
   public static final int INTEGER = 5;
+  public static final int TGT = 42;
   public static final int FOR = 10;
+  public static final int MINUS = 31;
   public static final int WRITE = 16;
-  public static final int CHARACTER = 30;
-  public static final int DECIMAL_CONSTANT = 28;
   public static final int NOT = 20;
-  public static final int SEMICOLON = 32;
+  public static final int SEMICOLON = 27;
   public static final int AND = 18;
-  public static final int RIGHT_CURLY_BRACE = 38;
+  public static final int DECIMALCONSTANT = 23;
+  public static final int LT = 33;
   public static final int OR = 17;
-  public static final int COMMA = 31;
+  public static final int COMMA = 26;
+  public static final int DIV = 39;
   public static final int BEGIN = 4;
-  public static final int MULOP = 25;
+  public static final int QUESTION_MARK = 44;
+  public static final int PLUS = 32;
+  public static final int DLT = 41;
   public static final int IF = 7;
-  public static final int RELOP = 23;
+  public static final int INTEGERCONSTANT = 22;
+  public static final int LE = 34;
   public static final int EOF = 0;
   public static final int DECIMAL = 6;
-  public static final int LEFT_SQUARE_BRACKET = 35;
   public static final int error = 1;
   public static final int PROGRAM = 2;
+  public static final int TLT = 43;
   public static final int MOD = 19;
-  public static final int ADDOP = 24;
+  public static final int EQ = 30;
   public static final int DECLARE = 3;
+  public static final int COLON = 45;
   public static final int ELSE = 9;
+  public static final int ACUTE_ACCENT = 47;
   public static final int READ = 15;
+  public static final int BACKTICK = 46;
   public static final int TO = 13;
   public static final int WHILE = 14;
-  public static final int SHIFTOP = 26;
   public static final int THEN = 8;
+  public static final int NE = 35;
   public static final int END = 11;
-  public static final int LEFT_PAREN = 34;
-  public static final int LEFT_CURLY_BRACE = 37;
+  public static final int LEFT_PAREN = 29;
+  public static final int GT = 36;
   public static final int DO = 12;
-  public static final int INTEGER_CONSTANT = 27;
-  public static final int IDENTIFIER = 22;
+  public static final int IDENTIFIER = 21;
   public static final String[] terminalNames = new String[] {
   "EOF",
   "error",
@@ -67,24 +76,33 @@ public class Sym {
   "AND",
   "MOD",
   "NOT",
-  "COMMENT",
   "IDENTIFIER",
-  "RELOP",
-  "ADDOP",
-  "MULOP",
-  "SHIFTOP",
-  "INTEGER_CONSTANT",
-  "DECIMAL_CONSTANT",
+  "INTEGERCONSTANT",
+  "DECIMALCONSTANT",
   "ASSIGN_OP",
-  "CHARACTER",
+  "CARACTERE",
   "COMMA",
   "SEMICOLON",
   "RIGHT_PAREN",
   "LEFT_PAREN",
-  "LEFT_SQUARE_BRACKET",
-  "RIGHT_SQUARE_BRACKET",
-  "LEFT_CURLY_BRACE",
-  "RIGHT_CURLY_BRACE"
+  "EQ",
+  "MINUS",
+  "PLUS",
+  "LT",
+  "LE",
+  "NE",
+  "GT",
+  "GE",
+  "MULT",
+  "DIV",
+  "DGT",
+  "DLT",
+  "TGT",
+  "TLT",
+  "QUESTION_MARK",
+  "COLON",
+  "BACKTICK",
+  "ACUTE_ACCENT"
   };
 }
 

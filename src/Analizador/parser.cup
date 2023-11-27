@@ -3,10 +3,9 @@ import java_cup.runtime.Symbol;
 /* Define o conjunto de terminais */
 terminal 
   PROGRAM, DECLARE, BEGIN, INTEGER, DECIMAL, IF, THEN, ELSE, FOR, END, DO, TO, 
-  WHILE, READ, WRITE, OR, AND, MOD, NOT, COMMENT, IDENTIFIER, INTEGERCONSTANT, DECIMALCONSTANT,
-  ASSIGN_OP, CHARACTER, COMMA, SEMICOLON, RIGHT_PAREN, LEFT_PAREN, LEFT_SQUARE_BRACKET,
-  RIGHT_SQUARE_BRACKET, LEFT_CURLY_BRACE, RIGHT_CURLY_BRACE, EQ, MINUS, PLUS, LT, LE, NE, GT, GE,
-  MULT, MODULO, DIV, DGT, DLT, TGT, TLT, QUESTION_MARK, COLON, BACKTICK, ACUTE_ACCENT;
+  WHILE, READ, WRITE, OR, AND, MOD, NOT, IDENTIFIER, INTEGERCONSTANT, DECIMALCONSTANT,
+  ASSIGN_OP, CARACTERE, COMMA, SEMICOLON, RIGHT_PAREN, LEFT_PAREN, 
+  EQ, MINUS, PLUS, LT, LE, NE, GT, GE, MULT, DIV, DGT, DLT, TGT, TLT, QUESTION_MARK, COLON, BACKTICK, ACUTE_ACCENT;
 
 /* Define o conjunto de não-terminais */
 non terminal 
@@ -15,9 +14,21 @@ non terminal
   FactoA, Factor, Expression, Relop, Addop, Mulop, 
   Shiftop, Literal, Condition, Writable, Readstmt, 
   Writestmt, Stmtsuffix, Whilestmt, Dowhilestmt, 
-  Forstmt,Ifstmt,IFComp;
+  Forstmt,Ifstmt,IFComp,ConditionalExpression,Loopcomplemeto,Dostmtlist,Whilecondition;
+
+/* Definição das precedências */
+precedence right ASSIGN_OP;
+precedence left DGT, DLT, TGT, TLT;
+precedence left OR;
+precedence left AND;
+precedence left EQ, NE;
+precedence left LT, LE, GT, GE;
+precedence left PLUS, MINUS;
+precedence left MULT, DIV, MOD;
+
 
 start with Startprogram;
+
 
 /* Produções da gramática */
 Startprogram ::= PROGRAM IDENTIFIER Body;
@@ -56,21 +67,38 @@ IFComp ::= END
 
 Assignstmt ::= IDENTIFIER ASSIGN_OP Simpleexp;
 
-Whilestmt ::= WHILE Condition DO Stmtlist END;
+Forstmt ::= FOR Assignstmt TO Condition  Loopcomplemeto;
 
-Dowhilestmt ::= DO Stmtlist Stmtsuffix;
+Whilestmt ::= Whilecondition Loopcomplemeto;
 
-Stmtsuffix ::= WHILE Condition SEMICOLON;
+Dowhilestmt ::= Dostmtlist  Stmtsuffix;
+
+Loopcomplemeto ::=   Dostmtlist END;
+
+Dostmtlist ::= DO Stmtlist;
+
+Stmtsuffix ::=  Whilecondition SEMICOLON;
+
+Whilecondition ::= WHILE Condition;
+
 
 Simpleexp ::= Term 
               | Simpleexp Addop Term
-              | RIGHT_PAREN Simpleexp LEFT_PAREN QUESTION_MARK Simpleexp COLON Simpleexp;
+              | ConditionalExpression QUESTION_MARK Simpleexp COLON Simpleexp;
+
+
+Factor ::= IDENTIFIER | INTEGERCONSTANT | DECIMALCONSTANT | RIGHT_PAREN Expression LEFT_PAREN | ConditionalExpression  ;
+
+Expression ::= Simpleexp Relop Simpleexp; 
+
+
+ConditionalExpression ::= RIGHT_PAREN Simpleexp LEFT_PAREN;
 
 Readstmt ::= READ RIGHT_PAREN IDENTIFIER LEFT_PAREN SEMICOLON;
 
 Writestmt ::= WRITE RIGHT_PAREN Writable LEFT_PAREN SEMICOLON;
 
-Forstmt ::= FOR Assignstmt TO Condition DO Stmtlist END;
+
 
 Writable ::= Simpleexp | Literal;
 
@@ -80,9 +108,6 @@ Term ::= FactoA | Term Mulop FactoA;
 
 FactoA ::= Factor | NOT Factor | MINUS Factor;
 
-Factor ::= IDENTIFIER | INTEGERCONSTANT | DECIMALCONSTANT | RIGHT_PAREN Expression LEFT_PAREN;
-
-Expression ::= Simpleexp | Simpleexp Relop Simpleexp; 
 
 Relop ::= EQ | GT | GE | LT | LE | NE;
 
@@ -90,9 +115,13 @@ Addop ::= PLUS | MINUS | OR;
 
 Mulop ::= MULT | DIV | MOD | AND;
 
-Shiftop ::= DGT | DLT | TGT | TLT;
+Shiftop ::= TLT
+          | TGT
+          | DLT
+          | DGT;
 
-Literal ::= BACKTICK BACKTICK CHARACTER ACUTE_ACCENT ACUTE_ACCENT 
-             | BACKTICK BACKTICK IDENTIFIER CHARACTER ACUTE_ACCENT ACUTE_ACCENT 
-             | BACKTICK BACKTICK CHARACTER IDENTIFIER ACUTE_ACCENT ACUTE_ACCENT
+
+Literal ::= BACKTICK BACKTICK CARACTERE ACUTE_ACCENT ACUTE_ACCENT 
+             | BACKTICK BACKTICK IDENTIFIER CARACTERE ACUTE_ACCENT ACUTE_ACCENT 
+             | BACKTICK BACKTICK CARACTERE IDENTIFIER ACUTE_ACCENT ACUTE_ACCENT
              | BACKTICK BACKTICK IDENTIFIER ACUTE_ACCENT ACUTE_ACCENT ;
