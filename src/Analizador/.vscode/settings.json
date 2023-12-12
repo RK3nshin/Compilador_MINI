@@ -1,7 +1,0 @@
-{
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "/home/guilbertwilkerson/Documentos/Compiladores/CompiladorMINI_Final/lib/java-cup-bin-11b-20160615/java-cup-11b-runtime.jar",
-        "/home/guilbertwilkerson/Documentos/Compiladores/CompiladorMINI_Final/lib/java-cup-bin-11b-20160615/java-cup-11b.jar"
-    ]
-}
