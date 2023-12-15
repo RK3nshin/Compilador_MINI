@@ -40,11 +40,11 @@ class Yylex implements java_cup.runtime.Scanner {
    */
   private static final String ZZ_CMAP_PACKED = 
     "\11\0\1\1\1\7\1\11\1\11\1\10\22\0\1\1\1\0\1\5"+
-    "\2\0\1\6\2\0\1\37\1\36\1\45\1\41\1\35\1\42\1\4"+
-    "\1\46\12\3\1\50\1\34\1\44\1\40\1\43\1\47\1\0\32\2"+
-    "\5\0\1\51\1\16\1\24\1\22\1\20\1\21\1\30\1\15\1\31"+
-    "\1\25\2\2\1\23\1\17\1\26\1\14\1\12\1\2\1\13\1\32"+
-    "\1\27\2\2\1\33\3\2\1\0\1\1\10\0\1\11\56\0\1\52"+
+    "\2\0\1\6\2\0\1\41\1\40\1\47\1\43\1\37\1\44\1\4"+
+    "\1\50\12\3\1\52\1\36\1\46\1\42\1\45\1\51\1\0\32\2"+
+    "\5\0\1\12\1\20\1\26\1\24\1\22\1\23\1\32\1\17\1\33"+
+    "\1\27\2\2\1\25\1\21\1\30\1\16\1\14\1\2\1\15\1\34"+
+    "\1\31\2\2\1\35\3\2\1\0\1\1\10\0\1\11\56\0\1\13"+
     "\u1f73\0\1\11\1\11\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\udfe6\0";
 
   /** 
@@ -58,15 +58,15 @@ class Yylex implements java_cup.runtime.Scanner {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\1\1\1\2\1\3\1\4\1\5\1\6\15\3"+
-    "\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16"+
-    "\1\17\1\20\1\21\1\22\1\23\2\1\2\0\1\24"+
-    "\2\3\1\25\2\3\1\26\5\3\1\27\1\3\1\30"+
-    "\4\3\1\31\1\32\1\33\1\34\1\35\1\36\1\37"+
-    "\1\40\1\41\2\3\1\42\1\43\2\3\1\44\2\3"+
-    "\1\45\1\3\1\46\2\3\1\47\1\50\1\3\1\51"+
-    "\2\3\1\52\2\3\1\53\5\3\1\54\1\3\1\55"+
-    "\1\56\4\3\1\57\1\60\1\61\1\62";
+    "\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\1"+
+    "\15\3\1\7\1\10\1\11\1\12\1\13\1\14\1\15"+
+    "\1\16\1\17\1\20\1\21\1\22\1\23\2\0\1\24"+
+    "\1\0\2\3\1\25\2\3\1\26\5\3\1\27\1\3"+
+    "\1\30\4\3\1\31\1\32\1\33\1\34\1\35\1\36"+
+    "\1\37\1\0\2\3\1\40\1\41\2\3\1\42\2\3"+
+    "\1\43\1\3\1\44\2\3\1\45\1\46\1\47\1\3"+
+    "\1\50\2\3\1\51\2\3\1\52\5\3\1\53\1\3"+
+    "\1\54\1\55\4\3\1\56\1\57\1\60\1\61";
 
   private static int [] zzUnpackAction() {
     int [] result = new int[106];
@@ -96,17 +96,17 @@ class Yylex implements java_cup.runtime.Scanner {
   private static final String ZZ_ROWMAP_PACKED_0 =
     "\0\0\0\53\0\53\0\126\0\201\0\53\0\254\0\327"+
     "\0\u0102\0\u012d\0\u0158\0\u0183\0\u01ae\0\u01d9\0\u0204\0\u022f"+
-    "\0\u025a\0\u0285\0\u02b0\0\u02db\0\53\0\53\0\53\0\53"+
-    "\0\53\0\53\0\53\0\u0306\0\u0331\0\53\0\53\0\53"+
-    "\0\u035c\0\u0387\0\u03b2\0\u03dd\0\254\0\53\0\u0408\0\u0433"+
+    "\0\u025a\0\u0285\0\u02b0\0\u02db\0\u0306\0\53\0\53\0\53"+
+    "\0\53\0\53\0\53\0\53\0\u0331\0\u035c\0\53\0\53"+
+    "\0\53\0\u0387\0\u03b2\0\254\0\53\0\u03dd\0\u0408\0\u0433"+
     "\0\126\0\u045e\0\u0489\0\126\0\u04b4\0\u04df\0\u050a\0\u0535"+
     "\0\u0560\0\126\0\u058b\0\126\0\u05b6\0\u05e1\0\u060c\0\u0637"+
-    "\0\53\0\u0662\0\53\0\53\0\u068d\0\53\0\53\0\53"+
-    "\0\u03dd\0\u06b8\0\u06e3\0\126\0\126\0\u070e\0\u0739\0\126"+
-    "\0\u0764\0\u078f\0\126\0\u07ba\0\126\0\u07e5\0\u0810\0\53"+
-    "\0\53\0\u083b\0\126\0\u0866\0\u0891\0\126\0\u08bc\0\u08e7"+
-    "\0\126\0\u0912\0\u093d\0\u0968\0\u0993\0\u09be\0\126\0\u09e9"+
-    "\0\126\0\126\0\u0a14\0\u0a3f\0\u0a6a\0\u0a95\0\126\0\126"+
+    "\0\53\0\u0662\0\53\0\53\0\u068d\0\53\0\u03b2\0\u06b8"+
+    "\0\u06e3\0\u070e\0\126\0\126\0\u0739\0\u0764\0\126\0\u078f"+
+    "\0\u07ba\0\126\0\u07e5\0\126\0\u0810\0\u083b\0\53\0\53"+
+    "\0\u06b8\0\u0866\0\126\0\u0891\0\u08bc\0\126\0\u08e7\0\u0912"+
+    "\0\126\0\u093d\0\u0968\0\u0993\0\u09be\0\u09e9\0\126\0\u0a14"+
+    "\0\126\0\126\0\u0a3f\0\u0a6a\0\u0a95\0\u0ac0\0\126\0\126"+
     "\0\126\0\126";
 
   private static int [] zzUnpackRowMap() {
@@ -134,57 +134,58 @@ class Yylex implements java_cup.runtime.Scanner {
 
   private static final String ZZ_TRANS_PACKED_0 =
     "\1\2\1\3\1\4\1\5\1\2\1\6\1\7\2\3"+
-    "\1\2\1\10\1\11\1\12\1\4\1\13\1\14\1\15"+
-    "\1\16\2\4\1\17\1\20\1\21\1\22\1\23\2\4"+
-    "\1\24\1\25\1\26\1\27\1\30\1\31\1\32\1\33"+
-    "\1\34\1\35\1\36\1\37\1\40\1\41\1\42\1\43"+
-    "\55\0\2\4\6\0\22\4\22\0\1\5\1\44\46\0"+
-    "\7\45\1\46\2\0\41\45\2\0\2\4\6\0\1\4"+
-    "\1\47\20\4\21\0\2\4\6\0\7\4\1\50\12\4"+
-    "\21\0\2\4\6\0\1\4\1\51\20\4\21\0\2\4"+
-    "\6\0\14\4\1\52\5\4\21\0\2\4\6\0\2\4"+
-    "\1\53\17\4\21\0\2\4\6\0\2\4\1\54\4\4"+
-    "\1\55\12\4\21\0\2\4\6\0\11\4\1\56\2\4"+
-    "\1\57\5\4\21\0\2\4\6\0\7\4\1\60\12\4"+
-    "\21\0\2\4\6\0\14\4\1\61\1\4\1\62\3\4"+
-    "\21\0\2\4\6\0\2\4\1\63\17\4\21\0\2\4"+
-    "\6\0\2\4\1\64\14\4\1\65\2\4\21\0\2\4"+
-    "\6\0\2\4\1\66\17\4\21\0\2\4\6\0\1\4"+
-    "\1\67\15\4\1\70\2\4\57\0\1\71\2\0\1\72"+
-    "\47\0\1\73\2\0\1\74\1\75\46\0\1\76\63\0"+
-    "\1\77\53\0\1\100\3\0\1\101\51\0\2\4\6\0"+
-    "\2\4\1\102\17\4\21\0\2\4\6\0\4\4\1\103"+
-    "\15\4\21\0\2\4\6\0\6\4\1\104\13\4\21\0"+
-    "\2\4\6\0\6\4\1\105\13\4\21\0\2\4\6\0"+
-    "\10\4\1\106\11\4\21\0\2\4\6\0\20\4\1\107"+
-    "\1\4\21\0\2\4\6\0\6\4\1\110\13\4\21\0"+
-    "\2\4\6\0\3\4\1\111\16\4\21\0\2\4\6\0"+
-    "\15\4\1\112\4\4\21\0\2\4\6\0\15\4\1\113"+
-    "\4\4\21\0\2\4\6\0\7\4\1\114\12\4\21\0"+
-    "\2\4\6\0\1\4\1\115\20\4\21\0\2\4\6\0"+
-    "\13\4\1\116\6\4\21\0\2\4\6\0\13\4\1\117"+
-    "\6\4\62\0\1\120\53\0\1\121\10\0\2\4\6\0"+
-    "\3\4\1\122\16\4\21\0\2\4\6\0\6\4\1\123"+
-    "\13\4\21\0\2\4\6\0\11\4\1\124\1\4\1\125"+
-    "\6\4\21\0\2\4\6\0\7\4\1\126\12\4\21\0"+
-    "\2\4\6\0\13\4\1\127\6\4\21\0\2\4\6\0"+
-    "\7\4\1\130\12\4\21\0\2\4\6\0\14\4\1\131"+
-    "\5\4\21\0\2\4\6\0\15\4\1\132\4\4\21\0"+
-    "\2\4\6\0\11\4\1\133\10\4\21\0\2\4\6\0"+
-    "\1\4\1\134\20\4\21\0\2\4\6\0\4\4\1\135"+
-    "\15\4\21\0\2\4\6\0\5\4\1\136\14\4\21\0"+
-    "\2\4\6\0\14\4\1\137\5\4\21\0\2\4\6\0"+
-    "\3\4\1\140\16\4\21\0\2\4\6\0\7\4\1\141"+
-    "\12\4\21\0\2\4\6\0\7\4\1\142\12\4\21\0"+
-    "\2\4\6\0\4\4\1\143\15\4\21\0\2\4\6\0"+
-    "\1\4\1\144\20\4\21\0\2\4\6\0\4\4\1\145"+
-    "\15\4\21\0\2\4\6\0\7\4\1\146\12\4\21\0"+
-    "\2\4\6\0\5\4\1\147\14\4\21\0\2\4\6\0"+
-    "\7\4\1\150\12\4\21\0\2\4\6\0\11\4\1\151"+
-    "\10\4\21\0\2\4\6\0\1\4\1\152\20\4\17\0";
+    "\1\2\1\10\1\2\1\11\1\12\1\13\1\4\1\14"+
+    "\1\15\1\16\1\17\2\4\1\20\1\21\1\22\1\23"+
+    "\1\24\2\4\1\25\1\26\1\27\1\30\1\31\1\32"+
+    "\1\33\1\34\1\35\1\36\1\37\1\40\1\41\1\42"+
+    "\55\0\2\4\10\0\22\4\20\0\1\5\1\43\46\0"+
+    "\7\44\1\45\2\0\41\44\12\0\1\46\42\0\2\4"+
+    "\10\0\1\4\1\47\20\4\17\0\2\4\10\0\7\4"+
+    "\1\50\12\4\17\0\2\4\10\0\1\4\1\51\20\4"+
+    "\17\0\2\4\10\0\14\4\1\52\5\4\17\0\2\4"+
+    "\10\0\2\4\1\53\17\4\17\0\2\4\10\0\2\4"+
+    "\1\54\4\4\1\55\12\4\17\0\2\4\10\0\11\4"+
+    "\1\56\2\4\1\57\5\4\17\0\2\4\10\0\7\4"+
+    "\1\60\12\4\17\0\2\4\10\0\14\4\1\61\1\4"+
+    "\1\62\3\4\17\0\2\4\10\0\2\4\1\63\17\4"+
+    "\17\0\2\4\10\0\2\4\1\64\14\4\1\65\2\4"+
+    "\17\0\2\4\10\0\2\4\1\66\17\4\17\0\2\4"+
+    "\10\0\1\4\1\67\15\4\1\70\2\4\57\0\1\71"+
+    "\2\0\1\72\47\0\1\73\2\0\1\74\1\75\46\0"+
+    "\1\76\13\0\1\77\47\0\12\46\1\0\1\100\37\46"+
+    "\2\0\2\4\10\0\2\4\1\101\17\4\17\0\2\4"+
+    "\10\0\4\4\1\102\15\4\17\0\2\4\10\0\6\4"+
+    "\1\103\13\4\17\0\2\4\10\0\6\4\1\104\13\4"+
+    "\17\0\2\4\10\0\10\4\1\105\11\4\17\0\2\4"+
+    "\10\0\20\4\1\106\1\4\17\0\2\4\10\0\6\4"+
+    "\1\107\13\4\17\0\2\4\10\0\3\4\1\110\16\4"+
+    "\17\0\2\4\10\0\15\4\1\111\4\4\17\0\2\4"+
+    "\10\0\15\4\1\112\4\4\17\0\2\4\10\0\7\4"+
+    "\1\113\12\4\17\0\2\4\10\0\1\4\1\114\20\4"+
+    "\17\0\2\4\10\0\13\4\1\115\6\4\17\0\2\4"+
+    "\10\0\13\4\1\116\6\4\62\0\1\117\53\0\1\120"+
+    "\4\0\12\46\1\0\1\121\37\46\2\0\2\4\10\0"+
+    "\3\4\1\122\16\4\17\0\2\4\10\0\6\4\1\123"+
+    "\13\4\17\0\2\4\10\0\11\4\1\124\1\4\1\125"+
+    "\6\4\17\0\2\4\10\0\7\4\1\126\12\4\17\0"+
+    "\2\4\10\0\13\4\1\127\6\4\17\0\2\4\10\0"+
+    "\7\4\1\130\12\4\17\0\2\4\10\0\14\4\1\131"+
+    "\5\4\17\0\2\4\10\0\15\4\1\132\4\4\17\0"+
+    "\2\4\10\0\11\4\1\133\10\4\17\0\2\4\10\0"+
+    "\1\4\1\134\20\4\17\0\2\4\10\0\4\4\1\135"+
+    "\15\4\17\0\2\4\10\0\5\4\1\136\14\4\17\0"+
+    "\2\4\10\0\14\4\1\137\5\4\17\0\2\4\10\0"+
+    "\3\4\1\140\16\4\17\0\2\4\10\0\7\4\1\141"+
+    "\12\4\17\0\2\4\10\0\7\4\1\142\12\4\17\0"+
+    "\2\4\10\0\4\4\1\143\15\4\17\0\2\4\10\0"+
+    "\1\4\1\144\20\4\17\0\2\4\10\0\4\4\1\145"+
+    "\15\4\17\0\2\4\10\0\7\4\1\146\12\4\17\0"+
+    "\2\4\10\0\5\4\1\147\14\4\17\0\2\4\10\0"+
+    "\7\4\1\150\12\4\17\0\2\4\10\0\11\4\1\151"+
+    "\10\4\17\0\2\4\10\0\1\4\1\152\20\4\15\0";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[2752];
+    int [] result = new int[2795];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -222,9 +223,9 @@ class Yylex implements java_cup.runtime.Scanner {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\2\11\2\1\1\11\16\1\7\11\2\1\3\11"+
-    "\3\1\2\0\1\11\22\1\1\11\1\1\2\11\1\1"+
-    "\3\11\17\1\2\11\31\1";
+    "\1\0\2\11\2\1\1\11\17\1\7\11\2\1\3\11"+
+    "\1\1\2\0\1\11\1\0\22\1\1\11\1\1\2\11"+
+    "\1\1\1\11\1\1\1\0\16\1\2\11\32\1";
 
   private static int [] zzUnpackAttribute() {
     int [] result = new int[106];
@@ -711,7 +712,7 @@ class Yylex implements java_cup.runtime.Scanner {
             switch (zzLexicalState) {
             case YYINITIAL: {
               System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: <<EOF>>");
-              System.out.println("action [385] { tabelaSimbolos.imprimirTabela();"+ZZ_NL+"    System.exit(0); }");
+              System.out.println("action [377] { tabelaSimbolos.imprimirTabela();"+ZZ_NL+"    System.exit(0); }");
               tabelaSimbolos.imprimirTabela();
     System.exit(0);
             }  // fall though
@@ -724,44 +725,41 @@ class Yylex implements java_cup.runtime.Scanner {
         switch (zzAction < 0 ? zzAction : ZZ_ACTION[zzAction]) {
           case 1: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [370] { Yytoken token = new Yytoken(Sym.CARACTERE, yytext(), yyline, yychar, yychar + yylength(), \"Caractere\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(Sym.CARACTERE, yytext(), yyline, yychar, yychar + yylength(), "Caractere");
-        tabelaSimbolos.adicionarEntrada(token);
-
-    return token;
+            System.out.println("action [365] { // Não é necessário um token para caracter é melhor reconhecer o literal }");
+            { // Não é necessário um token para caracter é melhor reconhecer o literal
             } 
             // fall through
-          case 51: break;
+          case 50: break;
           case 2: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [348] { // Ignorar espaços em branco e quebras de linha }");
+            System.out.println("action [336] { // Ignorar espaços em branco e quebras de linha }");
             { // Ignorar espaços em branco e quebras de linha
             } 
             // fall through
-          case 52: break;
+          case 51: break;
           case 3: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [341] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), \"Identifier\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
+            System.out.println("action [329] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), \"Identifier\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
             { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token;
             } 
             // fall through
-          case 53: break;
+          case 52: break;
           case 4: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [355] { Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline, yychar, yychar + yylength(), \"Interger\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Interger");
+            System.out.println("action [350] { Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline, yychar, yychar + yylength(), \"Numero Inteiro \");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Numero Inteiro ");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token;
             } 
             // fall through
-          case 54: break;
+          case 53: break;
           case 5: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [376] { System.out.println(\"Illegal character: <\" + yytext() + \">\" + \"line\" + yyline);"+ZZ_NL+"    Yytoken token = new Yytoken(Sym.error, yytext(), yyline, yychar, yychar + yylength(), \"Caractere\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
+            System.out.println("action [368] { System.out.println(\"Illegal character: <\" + yytext() + \">\" + \"line\" + yyline);"+ZZ_NL+"    Yytoken token = new Yytoken(Sym.error, yytext(), yyline, yychar, yychar + yylength(), \"Caractere\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
             { System.out.println("Illegal character: <" + yytext() + ">" + "line" + yyline);
     Yytoken token = new Yytoken(Sym.error, yytext(), yyline, yychar, yychar + yylength(), "Caractere");
         tabelaSimbolos.adicionarEntrada(token);
@@ -769,7 +767,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 55: break;
+          case 54: break;
           case 6: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [171] { Yytoken token = new Yytoken(Sym.MOD, yytext(), yyline, yychar, yychar + 3, \"Modulo\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -779,7 +777,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 56: break;
+          case 55: break;
           case 7: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [179] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yychar, yychar + 1, \"Semicolon\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -789,7 +787,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 57: break;
+          case 56: break;
           case 8: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [185] { Yytoken token = new Yytoken(Sym.COMMA, yytext(), yyline, yychar, yychar + 1, \"Comma\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -799,7 +797,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 58: break;
+          case 57: break;
           case 9: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [192] { Yytoken token = new Yytoken(Sym.RIGHT_PAREN, yytext(), yyline, yychar, yychar + 1, \"Right Parenthesis\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -809,7 +807,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 59: break;
+          case 58: break;
           case 10: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [199] { Yytoken token = new Yytoken(Sym.LEFT_PAREN, yytext(), yyline, yychar, yychar + 1, \"Left Parenthesis\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -819,7 +817,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 60: break;
+          case 59: break;
           case 11: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [208] { Yytoken token = new Yytoken(Sym.EQ, yytext(), yyline, yychar, yychar + 1, \"EQ\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -829,7 +827,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 61: break;
+          case 60: break;
           case 12: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [214] { Yytoken token = new Yytoken(Sym.PLUS, yytext(), yyline, yychar, yychar + 1, \"Plus\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -839,7 +837,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 62: break;
+          case 61: break;
           case 13: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [221] { Yytoken token = new Yytoken(Sym.MINUS, yytext(), yyline, yychar, yychar + 1, \"Minus\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -849,7 +847,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 63: break;
+          case 62: break;
           case 14: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [228] { Yytoken token = new Yytoken(Sym.GT, yytext(), yyline, yychar, yychar + 1, \"GT\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -859,7 +857,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 64: break;
+          case 63: break;
           case 15: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [242] { Yytoken token = new Yytoken(Sym.LT, yytext(), yyline, yychar, yychar + 1, \"LT\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -869,7 +867,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 65: break;
+          case 64: break;
           case 16: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [291] { Yytoken token = new Yytoken(Sym.MULT, yytext(), yyline, yychar, yychar + 1, \"Mult\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -879,7 +877,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 66: break;
+          case 65: break;
           case 17: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [298] { Yytoken token = new Yytoken(Sym.DIV, yytext(), yyline, yychar, yychar + 1, \"Div\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -889,7 +887,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 67: break;
+          case 66: break;
           case 18: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [305] { Yytoken token = new Yytoken(Sym.QUESTION_MARK, yytext(), yyline, yychar, yychar + 1, \"Question Mark\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -899,7 +897,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 68: break;
+          case 67: break;
           case 19: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [312] { Yytoken token = new Yytoken(Sym.COLON, yytext(), yyline, yychar, yychar + 1, \"Colon\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -909,14 +907,14 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 69: break;
+          case 68: break;
           case 20: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [351] { // Ignorar comentarios }");
+            System.out.println("action [339] { // Ignorar comentarios }");
             { // Ignorar comentarios
             } 
             // fall through
-          case 70: break;
+          case 69: break;
           case 21: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [143] { Yytoken token = new Yytoken(Sym.OR, yytext(), yyline, yychar, yychar + 2, \"Palavra reservada: or\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -926,7 +924,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 71: break;
+          case 70: break;
           case 22: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [108] { Yytoken token = new Yytoken(Sym.DO, yytext(), yyline, yychar, yychar + 2, \"Palavra reservada: do\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -936,7 +934,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 72: break;
+          case 71: break;
           case 23: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [73] { Yytoken token = new Yytoken(Sym.IF, yytext(), yyline, yychar, yychar + 2, \"Palavra reservada: if\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -946,7 +944,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 73: break;
+          case 72: break;
           case 24: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [115] { Yytoken token = new Yytoken(Sym.TO, yytext(), yyline, yychar, yychar + 2, \"Palavra reservada: to\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -956,7 +954,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 74: break;
+          case 73: break;
           case 25: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [235] { Yytoken token = new Yytoken(Sym.GE, yytext(), yyline, yychar, yychar + 2, \"GE\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -966,7 +964,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 75: break;
+          case 74: break;
           case 26: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [270] { Yytoken token = new Yytoken(Sym.DGT, yytext(), yyline, yychar, yychar + 2, \"DGT\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -976,7 +974,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 76: break;
+          case 75: break;
           case 27: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [249] { Yytoken token = new Yytoken(Sym.LE, yytext(), yyline, yychar, yychar + 2, \"LE\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -986,7 +984,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 77: break;
+          case 76: break;
           case 28: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [256] { Yytoken token = new Yytoken(Sym.NE, yytext(), yyline, yychar, yychar + 2, \"NE\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -996,7 +994,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 78: break;
+          case 77: break;
           case 29: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [263] { Yytoken token = new Yytoken(Sym.DLT, yytext(), yyline, yychar, yychar + 2, \"DLT\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
@@ -1006,48 +1004,28 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 79: break;
+          case 78: break;
           case 30: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [332] { Yytoken token = new Yytoken(Sym.ASSIGN_OP, yytext(), yyline, yychar, yychar + 2, \"ASSIGN_OP\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
+            System.out.println("action [320] { Yytoken token = new Yytoken(Sym.ASSIGN_OP, yytext(), yyline, yychar, yychar + 2, \"ASSIGN_OP\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
             { Yytoken token = new Yytoken(Sym.ASSIGN_OP, yytext(), yyline, yychar, yychar + 2, "ASSIGN_OP");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token;
             } 
             // fall through
-          case 80: break;
+          case 79: break;
           case 31: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [318] { Yytoken token = new Yytoken(Sym.BACKTICK, yytext(), yyline, yychar, yychar + 1, \"Backtick\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(Sym.BACKTICK, yytext(), yyline, yychar, yychar + 1, "Backtick");
+            System.out.println("action [357] { Yytoken token = new Yytoken(Sym.DECIMALCONSTANT, yytext(), yyline, yychar, yychar + yylength(), \"Numero Decimal\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.DECIMALCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Numero Decimal");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token;
             } 
             // fall through
-          case 81: break;
+          case 80: break;
           case 32: 
-            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [325] { Yytoken token = new Yytoken(Sym.ACUTE_ACCENT, yytext(), yyline, yychar, yychar + 1, \"Acute Accent\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(Sym.ACUTE_ACCENT, yytext(), yyline, yychar, yychar + 1, "Acute Accent");
-        tabelaSimbolos.adicionarEntrada(token);
-
-    return token;
-            } 
-            // fall through
-          case 82: break;
-          case 33: 
-            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [362] { Yytoken token = new Yytoken(Sym.DECIMALCONSTANT, yytext(), yyline, yychar, yychar + yylength(), \"Decimal\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(Sym.DECIMALCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Decimal");
-        tabelaSimbolos.adicionarEntrada(token);
-
-    return token;
-            } 
-            // fall through
-          case 83: break;
-          case 34: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [150] { Yytoken token = new Yytoken(Sym.AND, yytext(), yyline, yychar, yychar + 3, \"Palavra reservada: and\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
             { Yytoken token = new Yytoken(Sym.AND, yytext(), yyline, yychar, yychar + 3, "Palavra reservada: and");
@@ -1056,8 +1034,8 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 84: break;
-          case 35: 
+          case 81: break;
+          case 33: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [157] { Yytoken token = new Yytoken(Sym.MOD, yytext(), yyline, yychar, yychar + 3, \"Palavra reservada: mod\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
             { Yytoken token = new Yytoken(Sym.MOD, yytext(), yyline, yychar, yychar + 3, "Palavra reservada: mod");
@@ -1066,8 +1044,8 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 85: break;
-          case 36: 
+          case 82: break;
+          case 34: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [101] { Yytoken token = new Yytoken(Sym.END, yytext(), yyline, yychar, yychar + 3, \"Palavra reservada: end\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
             { Yytoken token = new Yytoken(Sym.END, yytext(), yyline, yychar, yychar + 3, "Palavra reservada: end");
@@ -1076,8 +1054,8 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 86: break;
-          case 37: 
+          case 83: break;
+          case 35: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [164] { Yytoken token = new Yytoken(Sym.NOT, yytext(), yyline, yychar, yychar + 3, \"Palavra reservada: not\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
             { Yytoken token = new Yytoken(Sym.NOT, yytext(), yyline, yychar, yychar + 3, "Palavra reservada: not");
@@ -1086,8 +1064,8 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 87: break;
-          case 38: 
+          case 84: break;
+          case 36: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [94] { Yytoken token = new Yytoken(Sym.FOR, yytext(), yyline, yychar, yychar + 3, \"Palavra reservada: for\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
             { Yytoken token = new Yytoken(Sym.FOR, yytext(), yyline, yychar, yychar + 3, "Palavra reservada: for");
@@ -1096,8 +1074,8 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 88: break;
-          case 39: 
+          case 85: break;
+          case 37: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [284] { Yytoken token = new Yytoken(Sym.TGT, yytext(), yyline, yychar, yychar + 3, \"TGT\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
             { Yytoken token = new Yytoken(Sym.TGT, yytext(), yyline, yychar, yychar + 3, "TGT");
@@ -1106,8 +1084,8 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 89: break;
-          case 40: 
+          case 86: break;
+          case 38: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [277] { Yytoken token = new Yytoken(Sym.TLT, yytext(), yyline, yychar, yychar + 3, \"TLT\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
             { Yytoken token = new Yytoken(Sym.TLT, yytext(), yyline, yychar, yychar + 3, "TLT");
@@ -1116,8 +1094,18 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 90: break;
-          case 41: 
+          case 87: break;
+          case 39: 
+            System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
+            System.out.println("action [343] { Yytoken token = new Yytoken(-1, yytext(), yyline, yychar, yychar + yylength(), \"Literal\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(-1, yytext(), yyline, yychar, yychar + yylength(), "Literal");
+        tabelaSimbolos.adicionarEntrada(token);
+
+    return token;
+            } 
+            // fall through
+          case 88: break;
+          case 40: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [129] { Yytoken token = new Yytoken(Sym.READ, yytext(), yyline, yychar, yychar + 4, \"Palavra reservada: read\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
             { Yytoken token = new Yytoken(Sym.READ, yytext(), yyline, yychar, yychar + 4, "Palavra reservada: read");
@@ -1126,8 +1114,8 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 91: break;
-          case 42: 
+          case 89: break;
+          case 41: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [87] { Yytoken token = new Yytoken(Sym.ELSE, yytext(), yyline, yychar, yychar + 4, \"Palavra reservada: else\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
             { Yytoken token = new Yytoken(Sym.ELSE, yytext(), yyline, yychar, yychar + 4, "Palavra reservada: else");
@@ -1136,8 +1124,8 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 92: break;
-          case 43: 
+          case 90: break;
+          case 42: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [80] { Yytoken token = new Yytoken(Sym.THEN, yytext(), yyline, yychar, yychar + 4, \"Palavra reservada: then\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
             { Yytoken token = new Yytoken(Sym.THEN, yytext(), yyline, yychar, yychar + 4, "Palavra reservada: then");
@@ -1146,8 +1134,8 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 93: break;
-          case 44: 
+          case 91: break;
+          case 43: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [54] { Yytoken token = new Yytoken(Sym.BEGIN, yytext(), yyline, yychar, yychar + 5, \"Palavra reservada: begin\");"+ZZ_NL+"    tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    return token; }");
             { Yytoken token = new Yytoken(Sym.BEGIN, yytext(), yyline, yychar, yychar + 5, "Palavra reservada: begin");
@@ -1155,8 +1143,8 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 94: break;
-          case 45: 
+          case 92: break;
+          case 44: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [136] { Yytoken token = new Yytoken(Sym.WRITE, yytext(), yyline, yychar, yychar + 5, \"Palavra reservada: write\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
             { Yytoken token = new Yytoken(Sym.WRITE, yytext(), yyline, yychar, yychar + 5, "Palavra reservada: write");
@@ -1165,8 +1153,8 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 95: break;
-          case 46: 
+          case 93: break;
+          case 45: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [122] { Yytoken token = new Yytoken(Sym.WHILE, yytext(), yyline, yychar, yychar + 5, \"Palavra reservada: while\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
             { Yytoken token = new Yytoken(Sym.WHILE, yytext(), yyline, yychar, yychar + 5, "Palavra reservada: while");
@@ -1175,8 +1163,8 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 96: break;
-          case 47: 
+          case 94: break;
+          case 46: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [42] { Yytoken token = new Yytoken(Sym.PROGRAM, yytext(), yyline, yychar, yychar + 7, \"Palavra reservada: program\");"+ZZ_NL+"    tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    return token; }");
             { Yytoken token = new Yytoken(Sym.PROGRAM, yytext(), yyline, yychar, yychar + 7, "Palavra reservada: program");
@@ -1184,8 +1172,8 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 97: break;
-          case 48: 
+          case 95: break;
+          case 47: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [48] { Yytoken token = new Yytoken(Sym.DECLARE, yytext(), yyline, yychar, yychar + 7, \"Palavra reservada: declare\");"+ZZ_NL+"    tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    return token; }");
             { Yytoken token = new Yytoken(Sym.DECLARE, yytext(), yyline, yychar, yychar + 7, "Palavra reservada: declare");
@@ -1193,8 +1181,8 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 98: break;
-          case 49: 
+          case 96: break;
+          case 48: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [66] { Yytoken token = new Yytoken(Sym.DECIMAL, yytext(), yyline, yychar, yychar + 7, \"Palavra reservada: decimal\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
             { Yytoken token = new Yytoken(Sym.DECIMAL, yytext(), yyline, yychar, yychar + 7, "Palavra reservada: decimal");
@@ -1203,8 +1191,8 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 99: break;
-          case 50: 
+          case 97: break;
+          case 49: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
             System.out.println("action [60] { Yytoken token = new Yytoken(Sym.INTEGER, yytext(), yyline, yychar, yychar + 7, \"Palavra reservada: integer\");"+ZZ_NL+"    tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+"    return token; }");
             { Yytoken token = new Yytoken(Sym.INTEGER, yytext(), yyline, yychar, yychar + 7, "Palavra reservada: integer");
@@ -1212,7 +1200,7 @@ class Yylex implements java_cup.runtime.Scanner {
     return token;
             } 
             // fall through
-          case 100: break;
+          case 98: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }

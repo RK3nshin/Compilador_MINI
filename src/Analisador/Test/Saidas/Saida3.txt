@@ -10,9 +10,9 @@ Line: 0
 Begin: 0
 End: 7
 line: 1 char: 7 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 1 char: 8 match: --teste3--
-action [341] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+action [329] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -24,7 +24,7 @@ Line: 0
 Begin: 8
 End: 14
 line: 1 char: 14 match: --\u000A--
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 2 char: 15 match: --declare--
 action [48] { Yytoken token = new Yytoken(Sym.DECLARE, yytext(), yyline, yychar, yychar + 7, "Palavra reservada: declare");
     tabelaSimbolos.adicionarEntrada(token);
@@ -37,15 +37,15 @@ Line: 1
 Begin: 15
 End: 22
 line: 2 char: 22 match: --\u000A--
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 3 char: 23 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 3 char: 24 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 3 char: 25 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 3 char: 26 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 3 char: 27 match: --integer--
 action [60] { Yytoken token = new Yytoken(Sym.INTEGER, yytext(), yyline, yychar, yychar + 7, "Palavra reservada: integer");
     tabelaSimbolos.adicionarEntrada(token);
@@ -58,9 +58,9 @@ Line: 2
 Begin: 27
 End: 34
 line: 3 char: 34 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 3 char: 35 match: --id--
-action [341] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+action [329] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -84,9 +84,9 @@ Line: 2
 Begin: 37
 End: 38
 line: 3 char: 38 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 3 char: 39 match: --qtd--
-action [341] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+action [329] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -110,9 +110,9 @@ Line: 2
 Begin: 42
 End: 43
 line: 3 char: 43 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 3 char: 44 match: --cont--
-action [341] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+action [329] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -136,9 +136,9 @@ Line: 2
 Begin: 48
 End: 49
 line: 3 char: 49 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 3 char: 50 match: --soma--
-action [341] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+action [329] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -162,9 +162,9 @@ Line: 2
 Begin: 54
 End: 55
 line: 3 char: 55 match: --\u000A--
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 4 char: 56 match: --\u000A--
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 5 char: 57 match: --begin--
 action [54] { Yytoken token = new Yytoken(Sym.BEGIN, yytext(), yyline, yychar, yychar + 5, "Palavra reservada: begin");
     tabelaSimbolos.adicionarEntrada(token);
@@ -177,17 +177,17 @@ Line: 4
 Begin: 57
 End: 62
 line: 5 char: 62 match: --\u000A--
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 6 char: 63 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 6 char: 64 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 6 char: 65 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 6 char: 66 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 6 char: 67 match: --qtd--
-action [341] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+action [329] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -199,9 +199,9 @@ Line: 5
 Begin: 67
 End: 70
 line: 6 char: 70 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 6 char: 71 match: --:=--
-action [332] { Yytoken token = new Yytoken(Sym.ASSIGN_OP, yytext(), yyline, yychar, yychar + 2, "ASSIGN_OP");
+action [320] { Yytoken token = new Yytoken(Sym.ASSIGN_OP, yytext(), yyline, yychar, yychar + 2, "ASSIGN_OP");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -213,16 +213,16 @@ Line: 5
 Begin: 71
 End: 73
 line: 6 char: 73 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 6 char: 74 match: --5--
-action [355] { Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Interger");
+action [350] { Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Numero Inteiro ");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
 Posicao na TS: 27
 lexema: 5
 Index: 22
-Name: Interger
+Name: Numero Inteiro 
 Line: 5
 Begin: 74
 End: 75
@@ -239,17 +239,17 @@ Line: 5
 Begin: 75
 End: 76
 line: 6 char: 76 match: --\u000A--
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 7 char: 77 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 7 char: 78 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 7 char: 79 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 7 char: 80 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 7 char: 81 match: --cont--
-action [341] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+action [329] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -261,9 +261,9 @@ Line: 6
 Begin: 81
 End: 85
 line: 7 char: 85 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 7 char: 86 match: --:=--
-action [332] { Yytoken token = new Yytoken(Sym.ASSIGN_OP, yytext(), yyline, yychar, yychar + 2, "ASSIGN_OP");
+action [320] { Yytoken token = new Yytoken(Sym.ASSIGN_OP, yytext(), yyline, yychar, yychar + 2, "ASSIGN_OP");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -275,16 +275,16 @@ Line: 6
 Begin: 86
 End: 88
 line: 7 char: 88 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 7 char: 89 match: --5--
-action [355] { Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Interger");
+action [350] { Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Numero Inteiro ");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
 Posicao na TS: 27
 lexema: 5
 Index: 22
-Name: Interger
+Name: Numero Inteiro 
 Line: 6
 Begin: 89
 End: 90
@@ -301,17 +301,17 @@ Line: 6
 Begin: 90
 End: 91
 line: 7 char: 91 match: --\u000A--
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 8 char: 92 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 8 char: 93 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 8 char: 94 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 8 char: 95 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 8 char: 96 match: --soma--
-action [341] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+action [329] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -323,9 +323,9 @@ Line: 7
 Begin: 96
 End: 100
 line: 8 char: 100 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 8 char: 101 match: --:=--
-action [332] { Yytoken token = new Yytoken(Sym.ASSIGN_OP, yytext(), yyline, yychar, yychar + 2, "ASSIGN_OP");
+action [320] { Yytoken token = new Yytoken(Sym.ASSIGN_OP, yytext(), yyline, yychar, yychar + 2, "ASSIGN_OP");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -337,16 +337,16 @@ Line: 7
 Begin: 101
 End: 103
 line: 8 char: 103 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 8 char: 104 match: --0--
-action [355] { Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Interger");
+action [350] { Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Numero Inteiro ");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
 Posicao na TS: 28
 lexema: 0
 Index: 22
-Name: Interger
+Name: Numero Inteiro 
 Line: 7
 Begin: 104
 End: 105
@@ -363,15 +363,15 @@ Line: 7
 Begin: 105
 End: 106
 line: 8 char: 106 match: --\u000A--
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 9 char: 107 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 9 char: 108 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 9 char: 109 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 9 char: 110 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 9 char: 111 match: --do--
 action [108] { Yytoken token = new Yytoken(Sym.DO, yytext(), yyline, yychar, yychar + 2, "Palavra reservada: do");
         tabelaSimbolos.adicionarEntrada(token);
@@ -385,23 +385,23 @@ Line: 8
 Begin: 111
 End: 113
 line: 9 char: 113 match: --\u000A--
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 10 char: 114 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 10 char: 115 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 10 char: 116 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 10 char: 117 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 10 char: 118 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 10 char: 119 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 10 char: 120 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 10 char: 121 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 10 char: 122 match: --write--
 action [136] { Yytoken token = new Yytoken(Sym.WRITE, yytext(), yyline, yychar, yychar + 5, "Palavra reservada: write");
         tabelaSimbolos.adicionarEntrada(token);
@@ -426,60 +426,24 @@ Name: Left Parenthesis
 Line: 9
 Begin: 127
 End: 128
-line: 10 char: 128 match: --``--
-action [318] { Yytoken token = new Yytoken(Sym.BACKTICK, yytext(), yyline, yychar, yychar + 1, "Backtick");
+line: 10 char: 128 match: --``Idade:\u00B4\u00B4--
+action [343] { Yytoken token = new Yytoken(-1, yytext(), yyline, yychar, yychar + yylength(), "Literal");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
 Posicao na TS: 30
-lexema: ``
-Index: 46
-Name: Backtick
+lexema: ``Idade:´´
+Index: -1
+Name: Literal
 Line: 9
 Begin: 128
-End: 129
-line: 10 char: 130 match: --Idade--
-action [341] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
-        tabelaSimbolos.adicionarEntrada(token);
-
-    return token; }
-Posicao na TS: 31
-lexema: Idade
-Index: 21
-Name: Identifier
-Line: 9
-Begin: 130
-End: 135
-line: 10 char: 135 match: --:--
-action [312] { Yytoken token = new Yytoken(Sym.COLON, yytext(), yyline, yychar, yychar + 1, "Colon");
-        tabelaSimbolos.adicionarEntrada(token);
-
-    return token; }
-Posicao na TS: 32
-lexema: :
-Index: 45
-Name: Colon
-Line: 9
-Begin: 135
-End: 136
-line: 10 char: 136 match: --\u00B4\u00B4--
-action [325] { Yytoken token = new Yytoken(Sym.ACUTE_ACCENT, yytext(), yyline, yychar, yychar + 1, "Acute Accent");
-        tabelaSimbolos.adicionarEntrada(token);
-
-    return token; }
-Posicao na TS: 33
-lexema: ´´
-Index: 47
-Name: Acute Accent
-Line: 9
-Begin: 136
-End: 137
+End: 138
 line: 10 char: 138 match: --)--
 action [192] { Yytoken token = new Yytoken(Sym.RIGHT_PAREN, yytext(), yyline, yychar, yychar + 1, "Right Parenthesis");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
-Posicao na TS: 34
+Posicao na TS: 31
 lexema: )
 Index: 28
 Name: Right Parenthesis
@@ -499,23 +463,23 @@ Line: 9
 Begin: 139
 End: 140
 line: 10 char: 140 match: --\u000A--
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 11 char: 141 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 11 char: 142 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 11 char: 143 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 11 char: 144 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 11 char: 145 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 11 char: 146 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 11 char: 147 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 11 char: 148 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 11 char: 149 match: --read--
 action [129] { Yytoken token = new Yytoken(Sym.READ, yytext(), yyline, yychar, yychar + 4, "Palavra reservada: read");
         tabelaSimbolos.adicionarEntrada(token);
@@ -529,7 +493,7 @@ Line: 10
 Begin: 149
 End: 153
 line: 11 char: 153 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 11 char: 154 match: --(--
 action [199] { Yytoken token = new Yytoken(Sym.LEFT_PAREN, yytext(), yyline, yychar, yychar + 1, "Left Parenthesis");
         tabelaSimbolos.adicionarEntrada(token);
@@ -543,7 +507,7 @@ Line: 10
 Begin: 154
 End: 155
 line: 11 char: 155 match: --id--
-action [341] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+action [329] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -559,7 +523,7 @@ action [192] { Yytoken token = new Yytoken(Sym.RIGHT_PAREN, yytext(), yyline, yy
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
-Posicao na TS: 34
+Posicao na TS: 31
 lexema: )
 Index: 28
 Name: Right Parenthesis
@@ -579,25 +543,25 @@ Line: 10
 Begin: 158
 End: 159
 line: 11 char: 159 match: --\u000A--
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 12 char: 160 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 12 char: 161 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 12 char: 162 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 12 char: 163 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 12 char: 164 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 12 char: 165 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 12 char: 166 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 12 char: 167 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 12 char: 168 match: --soma--
-action [341] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+action [329] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -609,9 +573,9 @@ Line: 11
 Begin: 168
 End: 172
 line: 12 char: 172 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 12 char: 173 match: --:=--
-action [332] { Yytoken token = new Yytoken(Sym.ASSIGN_OP, yytext(), yyline, yychar, yychar + 2, "ASSIGN_OP");
+action [320] { Yytoken token = new Yytoken(Sym.ASSIGN_OP, yytext(), yyline, yychar, yychar + 2, "ASSIGN_OP");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -623,9 +587,9 @@ Line: 11
 Begin: 173
 End: 175
 line: 12 char: 175 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 12 char: 176 match: --soma--
-action [341] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+action [329] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -637,13 +601,13 @@ Line: 11
 Begin: 176
 End: 180
 line: 12 char: 180 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 12 char: 181 match: --#--
-action [370] { Yytoken token = new Yytoken(Sym.CARACTERE, yytext(), yyline, yychar, yychar + yylength(), "Caractere");
+action [365] { Yytoken token = new Yytoken(Sym.CARACTERE, yytext(), yyline, yychar, yychar + yylength(), "Caractere");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
-Posicao na TS: 35
+Posicao na TS: 32
 lexema: #
 Index: 25
 Name: Caractere
@@ -651,9 +615,9 @@ Line: 11
 Begin: 181
 End: 182
 line: 12 char: 182 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 12 char: 183 match: --id--
-action [341] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+action [329] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -677,25 +641,25 @@ Line: 11
 Begin: 185
 End: 186
 line: 12 char: 186 match: --\u000A--
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 13 char: 187 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 13 char: 188 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 13 char: 189 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 13 char: 190 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 13 char: 191 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 13 char: 192 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 13 char: 193 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 13 char: 194 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 13 char: 195 match: --cont--
-action [341] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+action [329] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -707,9 +671,9 @@ Line: 12
 Begin: 195
 End: 199
 line: 13 char: 199 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 13 char: 200 match: --:=--
-action [332] { Yytoken token = new Yytoken(Sym.ASSIGN_OP, yytext(), yyline, yychar, yychar + 2, "ASSIGN_OP");
+action [320] { Yytoken token = new Yytoken(Sym.ASSIGN_OP, yytext(), yyline, yychar, yychar + 2, "ASSIGN_OP");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -721,9 +685,9 @@ Line: 12
 Begin: 200
 End: 202
 line: 13 char: 202 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 13 char: 203 match: --cont--
-action [341] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+action [329] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -735,13 +699,13 @@ Line: 12
 Begin: 203
 End: 207
 line: 13 char: 207 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 13 char: 208 match: --\u2013--
-action [370] { Yytoken token = new Yytoken(Sym.CARACTERE, yytext(), yyline, yychar, yychar + yylength(), "Caractere");
+action [365] { Yytoken token = new Yytoken(Sym.CARACTERE, yytext(), yyline, yychar, yychar + yylength(), "Caractere");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
-Posicao na TS: 36
+Posicao na TS: 33
 lexema: –
 Index: 25
 Name: Caractere
@@ -749,16 +713,16 @@ Line: 12
 Begin: 208
 End: 209
 line: 13 char: 209 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 13 char: 210 match: --1--
-action [355] { Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Interger");
+action [350] { Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Numero Inteiro ");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
-Posicao na TS: 37
+Posicao na TS: 34
 lexema: 1
 Index: 22
-Name: Interger
+Name: Numero Inteiro 
 Line: 12
 Begin: 210
 End: 211
@@ -775,17 +739,17 @@ Line: 12
 Begin: 211
 End: 212
 line: 13 char: 212 match: --\u000A--
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 14 char: 213 match: --\u000A--
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 15 char: 214 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 15 char: 215 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 15 char: 216 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 15 char: 217 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 15 char: 218 match: --while--
 action [122] { Yytoken token = new Yytoken(Sym.WHILE, yytext(), yyline, yychar, yychar + 5, "Palavra reservada: while");
         tabelaSimbolos.adicionarEntrada(token);
@@ -811,7 +775,7 @@ Line: 14
 Begin: 223
 End: 224
 line: 15 char: 224 match: --cont--
-action [341] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+action [329] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -823,13 +787,13 @@ Line: 14
 Begin: 224
 End: 228
 line: 15 char: 228 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 15 char: 229 match: -->--
 action [228] { Yytoken token = new Yytoken(Sym.GT, yytext(), yyline, yychar, yychar + 1, "GT");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
-Posicao na TS: 38
+Posicao na TS: 35
 lexema: >
 Index: 36
 Name: GT
@@ -837,16 +801,16 @@ Line: 14
 Begin: 229
 End: 230
 line: 15 char: 230 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 15 char: 231 match: --0--
-action [355] { Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Interger");
+action [350] { Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Numero Inteiro ");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
 Posicao na TS: 28
 lexema: 0
 Index: 22
-Name: Interger
+Name: Numero Inteiro 
 Line: 14
 Begin: 231
 End: 232
@@ -855,7 +819,7 @@ action [192] { Yytoken token = new Yytoken(Sym.RIGHT_PAREN, yytext(), yyline, yy
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
-Posicao na TS: 34
+Posicao na TS: 31
 lexema: )
 Index: 28
 Name: Right Parenthesis
@@ -875,15 +839,15 @@ Line: 14
 Begin: 233
 End: 234
 line: 15 char: 234 match: --\u000A--
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 16 char: 235 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 16 char: 236 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 16 char: 237 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 16 char: 238 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 16 char: 239 match: --write--
 action [136] { Yytoken token = new Yytoken(Sym.WRITE, yytext(), yyline, yychar, yychar + 5, "Palavra reservada: write");
         tabelaSimbolos.adicionarEntrada(token);
@@ -908,64 +872,24 @@ Name: Left Parenthesis
 Line: 15
 Begin: 244
 End: 245
-line: 16 char: 245 match: --``--
-action [318] { Yytoken token = new Yytoken(Sym.BACKTICK, yytext(), yyline, yychar, yychar + 1, "Backtick");
+line: 16 char: 245 match: --`` Media: \u00B4\u00B4--
+action [343] { Yytoken token = new Yytoken(-1, yytext(), yyline, yychar, yychar + yylength(), "Literal");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
-Posicao na TS: 30
-lexema: ``
-Index: 46
-Name: Backtick
+Posicao na TS: 36
+lexema: `` Media: ´´
+Index: -1
+Name: Literal
 Line: 15
 Begin: 245
-End: 246
-line: 16 char: 247 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
-line: 16 char: 248 match: --Media--
-action [341] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
-        tabelaSimbolos.adicionarEntrada(token);
-
-    return token; }
-Posicao na TS: 39
-lexema: Media
-Index: 21
-Name: Identifier
-Line: 15
-Begin: 248
-End: 253
-line: 16 char: 253 match: --:--
-action [312] { Yytoken token = new Yytoken(Sym.COLON, yytext(), yyline, yychar, yychar + 1, "Colon");
-        tabelaSimbolos.adicionarEntrada(token);
-
-    return token; }
-Posicao na TS: 32
-lexema: :
-Index: 45
-Name: Colon
-Line: 15
-Begin: 253
-End: 254
-line: 16 char: 254 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
-line: 16 char: 255 match: --\u00B4\u00B4--
-action [325] { Yytoken token = new Yytoken(Sym.ACUTE_ACCENT, yytext(), yyline, yychar, yychar + 1, "Acute Accent");
-        tabelaSimbolos.adicionarEntrada(token);
-
-    return token; }
-Posicao na TS: 33
-lexema: ´´
-Index: 47
-Name: Acute Accent
-Line: 15
-Begin: 255
-End: 256
+End: 257
 line: 16 char: 257 match: --)--
 action [192] { Yytoken token = new Yytoken(Sym.RIGHT_PAREN, yytext(), yyline, yychar, yychar + 1, "Right Parenthesis");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
-Posicao na TS: 34
+Posicao na TS: 31
 lexema: )
 Index: 28
 Name: Right Parenthesis
@@ -985,15 +909,15 @@ Line: 15
 Begin: 258
 End: 259
 line: 16 char: 259 match: --\u000A--
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 17 char: 260 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 17 char: 261 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 17 char: 262 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 17 char: 263 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 17 char: 264 match: --write--
 action [136] { Yytoken token = new Yytoken(Sym.WRITE, yytext(), yyline, yychar, yychar + 5, "Palavra reservada: write");
         tabelaSimbolos.adicionarEntrada(token);
@@ -1007,7 +931,7 @@ Line: 16
 Begin: 264
 End: 269
 line: 17 char: 269 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 17 char: 270 match: --(--
 action [199] { Yytoken token = new Yytoken(Sym.LEFT_PAREN, yytext(), yyline, yychar, yychar + 1, "Left Parenthesis");
         tabelaSimbolos.adicionarEntrada(token);
@@ -1021,7 +945,7 @@ Line: 16
 Begin: 270
 End: 271
 line: 17 char: 271 match: --soma--
-action [341] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+action [329] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -1033,13 +957,13 @@ Line: 16
 Begin: 271
 End: 275
 line: 17 char: 275 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 17 char: 276 match: --/--
 action [298] { Yytoken token = new Yytoken(Sym.DIV, yytext(), yyline, yychar, yychar + 1, "Div");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
-Posicao na TS: 40
+Posicao na TS: 37
 lexema: /
 Index: 39
 Name: Div
@@ -1047,9 +971,9 @@ Line: 16
 Begin: 276
 End: 277
 line: 17 char: 277 match: -- --
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 17 char: 278 match: --qtd--
-action [341] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
+action [329] { Yytoken token = new Yytoken(Sym.IDENTIFIER, yytext(), yyline, yychar, yychar + yylength(), "Identifier");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
@@ -1065,7 +989,7 @@ action [192] { Yytoken token = new Yytoken(Sym.RIGHT_PAREN, yytext(), yyline, yy
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
-Posicao na TS: 34
+Posicao na TS: 31
 lexema: )
 Index: 28
 Name: Right Parenthesis
@@ -1085,7 +1009,7 @@ Line: 16
 Begin: 282
 End: 283
 line: 17 char: 283 match: --\u000A--
-action [348] { // Ignorar espaços em branco e quebras de linha }
+action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 18 char: 284 match: --end--
 action [101] { Yytoken token = new Yytoken(Sym.END, yytext(), yyline, yychar, yychar + 3, "Palavra reservada: end");
         tabelaSimbolos.adicionarEntrada(token);
@@ -1099,7 +1023,7 @@ Line: 17
 Begin: 284
 End: 287
 line: 18 char: 287 match: <<EOF>>
-action [385] { tabelaSimbolos.imprimirTabela();
+action [380] { tabelaSimbolos.imprimirTabela();
     System.exit(0); }
 Tabela de Símbolos:
 ID: 0, Lexema: program, Nome: Palavra reservada: program, Index: 2
@@ -1129,17 +1053,14 @@ ID: 23, Lexema: cont, Nome: Identifier, Index: 21
 ID: 24, Lexema: soma, Nome: Identifier, Index: 21
 ID: 25, Lexema: ;, Nome: Semicolon, Index: 27
 ID: 26, Lexema: :=, Nome: ASSIGN_OP, Index: 24
-ID: 27, Lexema: 5, Nome: Interger, Index: 22
-ID: 28, Lexema: 0, Nome: Interger, Index: 22
+ID: 27, Lexema: 5, Nome: Numero Inteiro , Index: 22
+ID: 28, Lexema: 0, Nome: Numero Inteiro , Index: 22
 ID: 29, Lexema: (, Nome: Left Parenthesis, Index: 29
-ID: 30, Lexema: ``, Nome: Backtick, Index: 46
-ID: 31, Lexema: Idade, Nome: Identifier, Index: 21
-ID: 32, Lexema: :, Nome: Colon, Index: 45
-ID: 33, Lexema: ´´, Nome: Acute Accent, Index: 47
-ID: 34, Lexema: ), Nome: Right Parenthesis, Index: 28
-ID: 35, Lexema: #, Nome: Caractere, Index: 25
-ID: 36, Lexema: –, Nome: Caractere, Index: 25
-ID: 37, Lexema: 1, Nome: Interger, Index: 22
-ID: 38, Lexema: >, Nome: GT, Index: 36
-ID: 39, Lexema: Media, Nome: Identifier, Index: 21
-ID: 40, Lexema: /, Nome: Div, Index: 39
+ID: 30, Lexema: ``Idade:´´, Nome: Literal, Index: -1
+ID: 31, Lexema: ), Nome: Right Parenthesis, Index: 28
+ID: 32, Lexema: #, Nome: Caractere, Index: 25
+ID: 33, Lexema: –, Nome: Caractere, Index: 25
+ID: 34, Lexema: 1, Nome: Numero Inteiro , Index: 22
+ID: 35, Lexema: >, Nome: GT, Index: 36
+ID: 36, Lexema: `` Media: ´´, Nome: Literal, Index: -1
+ID: 37, Lexema: /, Nome: Div, Index: 39

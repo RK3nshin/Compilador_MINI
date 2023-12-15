@@ -35,7 +35,7 @@ DECIMAL_CONSTANT = {digit}+\.{digit}+
 identifier = {letter}({letter}|{digit})*
 caractere = [^0-9A-Za-z\" \t\r\n]
 Comentario = "%"(.*)\n
-
+Literal = ``[^`]*´´
 
 %%
 <YYINITIAL>{
@@ -315,19 +315,7 @@ Comentario = "%"(.*)\n
 
     return token;
 }
-"``" {
-    Yytoken token = new Yytoken(Sym.BACKTICK, yytext(), yyline, yychar, yychar + 1, "Backtick");
-        tabelaSimbolos.adicionarEntrada(token);
 
-    return token;
-}
-
-"´´" {
-    Yytoken token = new Yytoken(Sym.ACUTE_ACCENT, yytext(), yyline, yychar, yychar + 1, "Acute Accent");
-        tabelaSimbolos.adicionarEntrada(token);
-
-    return token;
-}
 
 ":=" {
   Yytoken token = new Yytoken(Sym.ASSIGN_OP, yytext(), yyline, yychar, yychar + 2, "ASSIGN_OP");
@@ -352,15 +340,22 @@ Comentario = "%"(.*)\n
     // Ignorar comentarios 
 }
 
+{Literal}  {
+    Yytoken token = new Yytoken(Sym.TEXTO, yytext(), yyline, yychar, yychar + yylength(), "Literal");
+        tabelaSimbolos.adicionarEntrada(token);
+
+    return token;
+}
+
 {INTEGER_CONSTANT} {
-    Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Interger");
+    Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Numero Inteiro ");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token;
 }
 
 {DECIMAL_CONSTANT} {
-    Yytoken token = new Yytoken(Sym.DECIMALCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Decimal");
+    Yytoken token = new Yytoken(Sym.DECIMALCONSTANT, yytext(), yyline, yychar, yychar + yylength(), "Numero Decimal");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token;
@@ -368,10 +363,7 @@ Comentario = "%"(.*)\n
 
 
 {caractere} {
-    Yytoken token = new Yytoken(Sym.CARACTERE, yytext(), yyline, yychar, yychar + yylength(), "Caractere");
-        tabelaSimbolos.adicionarEntrada(token);
-
-    return token;
+    // Não é necessário um token para caracter é melhor reconhecer o literal 
 }
 . { 
     System.out.println("Illegal character: <" + yytext() + ">" + "line" + yyline);

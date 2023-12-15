@@ -4,17 +4,17 @@ import java_cup.runtime.Symbol;
 terminal 
   PROGRAM, DECLARE, BEGIN, INTEGER, DECIMAL, IF, THEN, ELSE, FOR, END, DO, TO, 
   WHILE, READ, WRITE, OR, AND, MOD, NOT, IDENTIFIER, INTEGERCONSTANT, DECIMALCONSTANT,
-  ASSIGN_OP, CARACTERE, COMMA, SEMICOLON, RIGHT_PAREN, LEFT_PAREN, 
-  EQ, MINUS, PLUS, LT, LE, NE, GT, GE, MULT, DIV, DGT, DLT, TGT, TLT, QUESTION_MARK, COLON, BACKTICK, ACUTE_ACCENT;
+  ASSIGN_OP, COMMA, SEMICOLON, RIGHT_PAREN, LEFT_PAREN, 
+  EQ, MINUS, PLUS, LT, LE, NE, GT, GE, MULT, DIV, DGT, DLT, TGT, TLT, QUESTION_MARK, COLON, TEXTO;
 
 /* Define o conjunto de não-terminais */
 non terminal 
   Startprogram, Body, DeclList, Decl, IdentList, Type, Dlist, Commoindetifier, Semicolondecl,
-  Stmtlist, Stmt, Commostmt, Assignstmt, Simpleexp, Term, 
+  Stmtlist, Stmt, SemiColonstmt, Assignstmt, Simpleexpr, Term, 
   FactoA, Factor, Expression, Relop, Addop, Mulop, 
   Shiftop, Literal, Condition, Writable, Readstmt, 
-  Writestmt, Stmtsuffix, Whilestmt, Dowhilestmt, 
-  Forstmt,Ifstmt,IFComp,ConditionalExpression,Loopcomplemeto,Dostmtlist,Whilecondition;
+  Writestmt, Stmtsuffix, Whilestmt, 
+  Forstmt,Ifstmt,IFComp,ExpTail,Dowhilestmt;
 
 /* Definição das precedências */
 precedence right ASSIGN_OP;
@@ -39,7 +39,7 @@ Dlist ::= DECLARE DeclList | ;
 
 DeclList ::= Decl Semicolondecl;
 
-Semicolondecl ::= SEMICOLON Decl Semicolondecl | ;
+Semicolondecl ::= SEMICOLON Decl Semicolondecl | SEMICOLON;
 
 Decl ::= Type IdentList;
 
@@ -49,15 +49,39 @@ Commoindetifier ::= COMMA IDENTIFIER Commoindetifier | ;
 
 Type ::= INTEGER | DECIMAL;
 
-Stmtlist ::= Stmt Commostmt;
+Stmtlist ::= Stmt SemiColonstmt;
 
-Commostmt ::= COMMA Stmt Commostmt | ;
+SemiColonstmt ::= SEMICOLON Stmt SemiColonstmt | ;
 
 Stmt ::= Assignstmt 
          | Readstmt
          | Writestmt
          | Whilestmt
-         | Ifstmt;
+         |Dowhilestmt
+         | Ifstmt
+         | Forstmt;
+
+Assignstmt ::= IDENTIFIER ASSIGN_OP Simpleexpr;
+
+
+
+Expression ::= Simpleexpr ExpTail ;
+
+
+
+ExpTail ::= Relop Simpleexpr
+          | Shiftop Simpleexpr
+          | ;
+
+
+
+Simpleexpr ::= Term 
+              | Simpleexpr Addop Term
+              | RIGHT_PAREN Expression LEFT_PAREN QUESTION_MARK Simpleexpr COLON Simpleexpr;
+
+Writable ::= Simpleexpr | Literal;
+
+Condition ::= Expression;
 
 
 Ifstmt ::= IF Condition THEN  Stmtlist  IFComp;
@@ -65,48 +89,34 @@ Ifstmt ::= IF Condition THEN  Stmtlist  IFComp;
 IFComp ::= END
           | ELSE  Stmtlist END;
 
-Assignstmt ::= IDENTIFIER ASSIGN_OP Simpleexp;
-
-Forstmt ::= FOR Assignstmt TO Condition  Loopcomplemeto;
-
-Whilestmt ::= Whilecondition Loopcomplemeto;
-
-Dowhilestmt ::= Dostmtlist  Stmtsuffix;
-
-Loopcomplemeto ::=   Dostmtlist END;
-
-Dostmtlist ::= DO Stmtlist;
-
-Stmtsuffix ::=  Whilecondition SEMICOLON;
-
-Whilecondition ::= WHILE Condition;
-
-
-Simpleexp ::= Term 
-              | Simpleexp Addop Term
-              | ConditionalExpression QUESTION_MARK Simpleexp COLON Simpleexp;
-
-
-Factor ::= IDENTIFIER | INTEGERCONSTANT | DECIMALCONSTANT | RIGHT_PAREN Expression LEFT_PAREN | ConditionalExpression  ;
-
-Expression ::= Simpleexp Relop Simpleexp; 
-
-
-ConditionalExpression ::= RIGHT_PAREN Simpleexp LEFT_PAREN;
-
-Readstmt ::= READ RIGHT_PAREN IDENTIFIER LEFT_PAREN SEMICOLON;
-
-Writestmt ::= WRITE RIGHT_PAREN Writable LEFT_PAREN SEMICOLON;
-
-
-
-Writable ::= Simpleexp | Literal;
-
-Condition ::= Expression;
 
 Term ::= FactoA | Term Mulop FactoA;
 
 FactoA ::= Factor | NOT Factor | MINUS Factor;
+
+Readstmt ::= READ RIGHT_PAREN IDENTIFIER LEFT_PAREN;
+
+Writestmt ::= WRITE RIGHT_PAREN Writable LEFT_PAREN ;
+
+
+
+
+Factor ::= IDENTIFIER | INTEGERCONSTANT | DECIMALCONSTANT | RIGHT_PAREN Expression LEFT_PAREN  ;
+
+
+
+
+
+
+
+/* Loops */
+
+Forstmt ::= FOR Assignstmt TO Condition  DO Stmtlist  END ; 
+Whilestmt ::= Stmtsuffix DO Stmtlist  END;
+Stmtsuffix ::=  WHILE Condition ;
+Dowhilestmt ::=  DO Stmtlist   Stmtsuffix;
+
+
 
 
 Relop ::= EQ | GT | GE | LT | LE | NE;
@@ -121,7 +131,4 @@ Shiftop ::= TLT
           | DGT;
 
 
-Literal ::= BACKTICK BACKTICK CARACTERE ACUTE_ACCENT ACUTE_ACCENT 
-             | BACKTICK BACKTICK IDENTIFIER CARACTERE ACUTE_ACCENT ACUTE_ACCENT 
-             | BACKTICK BACKTICK CARACTERE IDENTIFIER ACUTE_ACCENT ACUTE_ACCENT
-             | BACKTICK BACKTICK IDENTIFIER ACUTE_ACCENT ACUTE_ACCENT ;
+Literal ::= TEXTO;
