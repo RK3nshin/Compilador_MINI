@@ -1,4 +1,6 @@
 import java_cup.runtime.Symbol;
+import java.io.IOException;
+
 
 
 public class Yytoken extends Symbol{
@@ -25,6 +27,10 @@ public class Yytoken extends Symbol{
         this.index = index;
         this.lexema = lexema;
         this.name = name;
+    }
+    public Yytoken(int index){
+          super(index);
+          this.index = index;
     }
 
     // Getters

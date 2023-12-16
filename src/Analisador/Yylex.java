@@ -304,15 +304,15 @@ class Yylex implements java_cup.runtime.Scanner {
   private int zzFinalHighSurrogate = 0;
 
   /* user code: */
-
     
-     TabelaSimbolos tabelaSimbolos = new TabelaSimbolos();
-
-     public Yylex(String filePath,  TabelaSimbolos symbolTable) throws IOException {
-        this.zzReader = new BufferedReader(new FileReader(filePath));
-        this.tabelaSimbolos = symbolTable;
+    TabelaSimbolos tabelaSimbolos =  new TabelaSimbolos() ;
+    public TabelaSimbolos getTabelaSimbolos (){
+        return tabelaSimbolos;
     }
 
+
+  
+  
 
 
   /**
@@ -1097,8 +1097,8 @@ class Yylex implements java_cup.runtime.Scanner {
           case 87: break;
           case 39: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [343] { Yytoken token = new Yytoken(-1, yytext(), yyline, yychar, yychar + yylength(), \"Literal\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(-1, yytext(), yyline, yychar, yychar + yylength(), "Literal");
+            System.out.println("action [343] { Yytoken token = new Yytoken(Sym.TEXTO, yytext(), yyline, yychar, yychar + yylength(), \"Literal\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.TEXTO, yytext(), yyline, yychar, yychar + yylength(), "Literal");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token;

@@ -8,15 +8,15 @@ import java.io.IOException;
 %%
 
 %{
-
     
-     TabelaSimbolos tabelaSimbolos = new TabelaSimbolos();
-
-     public Yylex(String filePath,  TabelaSimbolos symbolTable) throws IOException {
-        this.zzReader = new BufferedReader(new FileReader(filePath));
-        this.tabelaSimbolos = symbolTable;
+    TabelaSimbolos tabelaSimbolos =  new TabelaSimbolos() ;
+    public TabelaSimbolos getTabelaSimbolos (){
+        return tabelaSimbolos;
     }
 
+
+  
+  
 %}
 
 /* Opções e declarações */

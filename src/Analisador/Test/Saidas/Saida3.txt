@@ -78,7 +78,7 @@ action [185] { Yytoken token = new Yytoken(Sym.COMMA, yytext(), yyline, yychar, 
     return token; }
 Posicao na TS: 21
 lexema: ,
-Index: 26
+Index: 25
 Name: Comma
 Line: 2
 Begin: 37
@@ -104,7 +104,7 @@ action [185] { Yytoken token = new Yytoken(Sym.COMMA, yytext(), yyline, yychar, 
     return token; }
 Posicao na TS: 21
 lexema: ,
-Index: 26
+Index: 25
 Name: Comma
 Line: 2
 Begin: 42
@@ -130,7 +130,7 @@ action [185] { Yytoken token = new Yytoken(Sym.COMMA, yytext(), yyline, yychar, 
     return token; }
 Posicao na TS: 21
 lexema: ,
-Index: 26
+Index: 25
 Name: Comma
 Line: 2
 Begin: 48
@@ -156,7 +156,7 @@ action [179] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yych
     return token; }
 Posicao na TS: 25
 lexema: ;
-Index: 27
+Index: 26
 Name: Semicolon
 Line: 2
 Begin: 54
@@ -233,7 +233,7 @@ action [179] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yych
     return token; }
 Posicao na TS: 25
 lexema: ;
-Index: 27
+Index: 26
 Name: Semicolon
 Line: 5
 Begin: 75
@@ -295,7 +295,7 @@ action [179] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yych
     return token; }
 Posicao na TS: 25
 lexema: ;
-Index: 27
+Index: 26
 Name: Semicolon
 Line: 6
 Begin: 90
@@ -357,7 +357,7 @@ action [179] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yych
     return token; }
 Posicao na TS: 25
 lexema: ;
-Index: 27
+Index: 26
 Name: Semicolon
 Line: 7
 Begin: 105
@@ -421,19 +421,19 @@ action [199] { Yytoken token = new Yytoken(Sym.LEFT_PAREN, yytext(), yyline, yyc
     return token; }
 Posicao na TS: 29
 lexema: (
-Index: 29
+Index: 28
 Name: Left Parenthesis
 Line: 9
 Begin: 127
 End: 128
 line: 10 char: 128 match: --``Idade:\u00B4\u00B4--
-action [343] { Yytoken token = new Yytoken(-1, yytext(), yyline, yychar, yychar + yylength(), "Literal");
+action [343] { Yytoken token = new Yytoken(Sym.TEXTO, yytext(), yyline, yychar, yychar + yylength(), "Literal");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
 Posicao na TS: 30
 lexema: ``Idade:´´
-Index: -1
+Index: 45
 Name: Literal
 Line: 9
 Begin: 128
@@ -445,7 +445,7 @@ action [192] { Yytoken token = new Yytoken(Sym.RIGHT_PAREN, yytext(), yyline, yy
     return token; }
 Posicao na TS: 31
 lexema: )
-Index: 28
+Index: 27
 Name: Right Parenthesis
 Line: 9
 Begin: 138
@@ -457,7 +457,7 @@ action [179] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yych
     return token; }
 Posicao na TS: 25
 lexema: ;
-Index: 27
+Index: 26
 Name: Semicolon
 Line: 9
 Begin: 139
@@ -501,7 +501,7 @@ action [199] { Yytoken token = new Yytoken(Sym.LEFT_PAREN, yytext(), yyline, yyc
     return token; }
 Posicao na TS: 29
 lexema: (
-Index: 29
+Index: 28
 Name: Left Parenthesis
 Line: 10
 Begin: 154
@@ -525,7 +525,7 @@ action [192] { Yytoken token = new Yytoken(Sym.RIGHT_PAREN, yytext(), yyline, yy
     return token; }
 Posicao na TS: 31
 lexema: )
-Index: 28
+Index: 27
 Name: Right Parenthesis
 Line: 10
 Begin: 157
@@ -537,7 +537,7 @@ action [179] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yych
     return token; }
 Posicao na TS: 25
 lexema: ;
-Index: 27
+Index: 26
 Name: Semicolon
 Line: 10
 Begin: 158
@@ -603,17 +603,7 @@ End: 180
 line: 12 char: 180 match: -- --
 action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 12 char: 181 match: --#--
-action [365] { Yytoken token = new Yytoken(Sym.CARACTERE, yytext(), yyline, yychar, yychar + yylength(), "Caractere");
-        tabelaSimbolos.adicionarEntrada(token);
-
-    return token; }
-Posicao na TS: 32
-lexema: #
-Index: 25
-Name: Caractere
-Line: 11
-Begin: 181
-End: 182
+action [365] { // Não é necessário um token para caracter é melhor reconhecer o literal }
 line: 12 char: 182 match: -- --
 action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 12 char: 183 match: --id--
@@ -635,7 +625,7 @@ action [179] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yych
     return token; }
 Posicao na TS: 25
 lexema: ;
-Index: 27
+Index: 26
 Name: Semicolon
 Line: 11
 Begin: 185
@@ -701,17 +691,7 @@ End: 207
 line: 13 char: 207 match: -- --
 action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 13 char: 208 match: --\u2013--
-action [365] { Yytoken token = new Yytoken(Sym.CARACTERE, yytext(), yyline, yychar, yychar + yylength(), "Caractere");
-        tabelaSimbolos.adicionarEntrada(token);
-
-    return token; }
-Posicao na TS: 33
-lexema: –
-Index: 25
-Name: Caractere
-Line: 12
-Begin: 208
-End: 209
+action [365] { // Não é necessário um token para caracter é melhor reconhecer o literal }
 line: 13 char: 209 match: -- --
 action [336] { // Ignorar espaços em branco e quebras de linha }
 line: 13 char: 210 match: --1--
@@ -719,7 +699,7 @@ action [350] { Yytoken token = new Yytoken(Sym.INTEGERCONSTANT, yytext(), yyline
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
-Posicao na TS: 34
+Posicao na TS: 32
 lexema: 1
 Index: 22
 Name: Numero Inteiro 
@@ -733,7 +713,7 @@ action [179] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yych
     return token; }
 Posicao na TS: 25
 lexema: ;
-Index: 27
+Index: 26
 Name: Semicolon
 Line: 12
 Begin: 211
@@ -769,7 +749,7 @@ action [199] { Yytoken token = new Yytoken(Sym.LEFT_PAREN, yytext(), yyline, yyc
     return token; }
 Posicao na TS: 29
 lexema: (
-Index: 29
+Index: 28
 Name: Left Parenthesis
 Line: 14
 Begin: 223
@@ -793,9 +773,9 @@ action [228] { Yytoken token = new Yytoken(Sym.GT, yytext(), yyline, yychar, yyc
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
-Posicao na TS: 35
+Posicao na TS: 33
 lexema: >
-Index: 36
+Index: 35
 Name: GT
 Line: 14
 Begin: 229
@@ -821,7 +801,7 @@ action [192] { Yytoken token = new Yytoken(Sym.RIGHT_PAREN, yytext(), yyline, yy
     return token; }
 Posicao na TS: 31
 lexema: )
-Index: 28
+Index: 27
 Name: Right Parenthesis
 Line: 14
 Begin: 232
@@ -833,7 +813,7 @@ action [179] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yych
     return token; }
 Posicao na TS: 25
 lexema: ;
-Index: 27
+Index: 26
 Name: Semicolon
 Line: 14
 Begin: 233
@@ -867,19 +847,19 @@ action [199] { Yytoken token = new Yytoken(Sym.LEFT_PAREN, yytext(), yyline, yyc
     return token; }
 Posicao na TS: 29
 lexema: (
-Index: 29
+Index: 28
 Name: Left Parenthesis
 Line: 15
 Begin: 244
 End: 245
 line: 16 char: 245 match: --`` Media: \u00B4\u00B4--
-action [343] { Yytoken token = new Yytoken(-1, yytext(), yyline, yychar, yychar + yylength(), "Literal");
+action [343] { Yytoken token = new Yytoken(Sym.TEXTO, yytext(), yyline, yychar, yychar + yylength(), "Literal");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
-Posicao na TS: 36
+Posicao na TS: 34
 lexema: `` Media: ´´
-Index: -1
+Index: 45
 Name: Literal
 Line: 15
 Begin: 245
@@ -891,7 +871,7 @@ action [192] { Yytoken token = new Yytoken(Sym.RIGHT_PAREN, yytext(), yyline, yy
     return token; }
 Posicao na TS: 31
 lexema: )
-Index: 28
+Index: 27
 Name: Right Parenthesis
 Line: 15
 Begin: 257
@@ -903,7 +883,7 @@ action [179] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yych
     return token; }
 Posicao na TS: 25
 lexema: ;
-Index: 27
+Index: 26
 Name: Semicolon
 Line: 15
 Begin: 258
@@ -939,7 +919,7 @@ action [199] { Yytoken token = new Yytoken(Sym.LEFT_PAREN, yytext(), yyline, yyc
     return token; }
 Posicao na TS: 29
 lexema: (
-Index: 29
+Index: 28
 Name: Left Parenthesis
 Line: 16
 Begin: 270
@@ -963,9 +943,9 @@ action [298] { Yytoken token = new Yytoken(Sym.DIV, yytext(), yyline, yychar, yy
         tabelaSimbolos.adicionarEntrada(token);
 
     return token; }
-Posicao na TS: 37
+Posicao na TS: 35
 lexema: /
-Index: 39
+Index: 38
 Name: Div
 Line: 16
 Begin: 276
@@ -991,7 +971,7 @@ action [192] { Yytoken token = new Yytoken(Sym.RIGHT_PAREN, yytext(), yyline, yy
     return token; }
 Posicao na TS: 31
 lexema: )
-Index: 28
+Index: 27
 Name: Right Parenthesis
 Line: 16
 Begin: 281
@@ -1003,7 +983,7 @@ action [179] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yych
     return token; }
 Posicao na TS: 25
 lexema: ;
-Index: 27
+Index: 26
 Name: Semicolon
 Line: 16
 Begin: 282
@@ -1023,7 +1003,7 @@ Line: 17
 Begin: 284
 End: 287
 line: 18 char: 287 match: <<EOF>>
-action [380] { tabelaSimbolos.imprimirTabela();
+action [377] { tabelaSimbolos.imprimirTabela();
     System.exit(0); }
 Tabela de Símbolos:
 ID: 0, Lexema: program, Nome: Palavra reservada: program, Index: 2
@@ -1047,20 +1027,18 @@ ID: 17, Lexema: mod, Nome: Palavra reservada: mod, Index: 19
 ID: 18, Lexema: not, Nome: Palavra reservada: not, Index: 20
 ID: 19, Lexema: teste3, Nome: Identifier, Index: 21
 ID: 20, Lexema: id, Nome: Identifier, Index: 21
-ID: 21, Lexema: ,, Nome: Comma, Index: 26
+ID: 21, Lexema: ,, Nome: Comma, Index: 25
 ID: 22, Lexema: qtd, Nome: Identifier, Index: 21
 ID: 23, Lexema: cont, Nome: Identifier, Index: 21
 ID: 24, Lexema: soma, Nome: Identifier, Index: 21
-ID: 25, Lexema: ;, Nome: Semicolon, Index: 27
+ID: 25, Lexema: ;, Nome: Semicolon, Index: 26
 ID: 26, Lexema: :=, Nome: ASSIGN_OP, Index: 24
 ID: 27, Lexema: 5, Nome: Numero Inteiro , Index: 22
 ID: 28, Lexema: 0, Nome: Numero Inteiro , Index: 22
-ID: 29, Lexema: (, Nome: Left Parenthesis, Index: 29
-ID: 30, Lexema: ``Idade:´´, Nome: Literal, Index: -1
-ID: 31, Lexema: ), Nome: Right Parenthesis, Index: 28
-ID: 32, Lexema: #, Nome: Caractere, Index: 25
-ID: 33, Lexema: –, Nome: Caractere, Index: 25
-ID: 34, Lexema: 1, Nome: Numero Inteiro , Index: 22
-ID: 35, Lexema: >, Nome: GT, Index: 36
-ID: 36, Lexema: `` Media: ´´, Nome: Literal, Index: -1
-ID: 37, Lexema: /, Nome: Div, Index: 39
+ID: 29, Lexema: (, Nome: Left Parenthesis, Index: 28
+ID: 30, Lexema: ``Idade:´´, Nome: Literal, Index: 45
+ID: 31, Lexema: ), Nome: Right Parenthesis, Index: 27
+ID: 32, Lexema: 1, Nome: Numero Inteiro , Index: 22
+ID: 33, Lexema: >, Nome: GT, Index: 35
+ID: 34, Lexema: `` Media: ´´, Nome: Literal, Index: 45
+ID: 35, Lexema: /, Nome: Div, Index: 38

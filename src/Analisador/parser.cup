@@ -1,5 +1,22 @@
 import java_cup.runtime.Symbol;
 
+
+
+parser code {:
+    // conectar esse parser ao scanner!
+    Yylex s;
+    TabelaSimbolos Ts ; 
+    Parser(Yylex s , TabelaSimbolos Ts ){ 
+      this.s=s; 
+      this.Ts = Ts;
+    }
+:}
+
+/* conectar esse parser ao scanner! */
+init with {:  :};
+scan with {: return s.next_token(); :};
+
+
 /* Define o conjunto de terminais */
 terminal 
   PROGRAM, DECLARE, BEGIN, INTEGER, DECIMAL, IF, THEN, ELSE, FOR, END, DO, TO, 
@@ -31,27 +48,28 @@ start with Startprogram;
 
 
 /* Produções da gramática */
-Startprogram ::= PROGRAM IDENTIFIER Body;
+Startprogram ::= PROGRAM IDENTIFIER Body  
+                 {: System.out.println("OK"); :};
 
-Body ::= Dlist BEGIN Stmtlist END;
+Body ::= Dlist BEGIN Stmtlist END  {: System.out.println("OK"); :};
 
-Dlist ::= DECLARE DeclList | ;
+Dlist ::= DECLARE DeclList |   {: System.out.println("OK"); :};
 
-DeclList ::= Decl Semicolondecl;
+DeclList ::= Decl Semicolondecl  {: System.out.println("OK"); :};
 
-Semicolondecl ::= SEMICOLON Decl Semicolondecl | SEMICOLON;
+Semicolondecl ::= SEMICOLON Decl Semicolondecl | SEMICOLON  {: System.out.println("OK"); :};
 
-Decl ::= Type IdentList;
+Decl ::= Type IdentList  {: System.out.println("OK"); :};
 
-IdentList ::= IDENTIFIER Commoindetifier;
+IdentList ::= IDENTIFIER Commoindetifier  {: System.out.println("OK"); :};
 
-Commoindetifier ::= COMMA IDENTIFIER Commoindetifier | ;
+Commoindetifier ::= COMMA IDENTIFIER Commoindetifier |   {: System.out.println("OK"); :};
 
-Type ::= INTEGER | DECIMAL;
+Type ::= INTEGER | DECIMAL  {: System.out.println("OK"); :};
 
-Stmtlist ::= Stmt SemiColonstmt;
+Stmtlist ::= Stmt SemiColonstmt  {: System.out.println("OK"); :};
 
-SemiColonstmt ::= SEMICOLON Stmt SemiColonstmt | ;
+SemiColonstmt ::= SEMICOLON Stmt SemiColonstmt |   {: System.out.println("OK"); :};
 
 Stmt ::= Assignstmt 
          | Readstmt
@@ -59,49 +77,49 @@ Stmt ::= Assignstmt
          | Whilestmt
          |Dowhilestmt
          | Ifstmt
-         | Forstmt;
+         | Forstmt  {: System.out.println("OK"); :};
 
-Assignstmt ::= IDENTIFIER ASSIGN_OP Simpleexpr;
+Assignstmt ::= IDENTIFIER ASSIGN_OP Simpleexpr  {: System.out.println("OK"); :};
 
 
 
-Expression ::= Simpleexpr ExpTail ;
+Expression ::= Simpleexpr ExpTail   {: System.out.println("OK"); :};
 
 
 
 ExpTail ::= Relop Simpleexpr
           | Shiftop Simpleexpr
-          | ;
+          |   {: System.out.println("OK"); :};
 
 
 
 Simpleexpr ::= Term 
               | Simpleexpr Addop Term
-              | RIGHT_PAREN Expression LEFT_PAREN QUESTION_MARK Simpleexpr COLON Simpleexpr;
+              | RIGHT_PAREN Expression LEFT_PAREN QUESTION_MARK Simpleexpr COLON Simpleexpr  {: System.out.println("OK"); :};
 
-Writable ::= Simpleexpr | Literal;
+Writable ::= Simpleexpr | Literal  {: System.out.println("OK"); :};
 
-Condition ::= Expression;
+Condition ::= Expression  {: System.out.println("OK"); :};
 
 
-Ifstmt ::= IF Condition THEN  Stmtlist  IFComp;
+Ifstmt ::= IF Condition THEN  Stmtlist  IFComp  {: System.out.println("OK"); :};
 
 IFComp ::= END
-          | ELSE  Stmtlist END;
+          | ELSE  Stmtlist END  {: System.out.println("OK"); :};
 
 
-Term ::= FactoA | Term Mulop FactoA;
+Term ::= FactoA | Term Mulop FactoA  {: System.out.println("OK"); :};
 
-FactoA ::= Factor | NOT Factor | MINUS Factor;
+FactoA ::= Factor | NOT Factor | MINUS Factor  {: System.out.println("OK"); :};
 
-Readstmt ::= READ RIGHT_PAREN IDENTIFIER LEFT_PAREN;
+Readstmt ::= READ RIGHT_PAREN IDENTIFIER LEFT_PAREN  {: System.out.println("OK"); :};
 
-Writestmt ::= WRITE RIGHT_PAREN Writable LEFT_PAREN ;
-
-
+Writestmt ::= WRITE RIGHT_PAREN Writable LEFT_PAREN   {: System.out.println("OK"); :};
 
 
-Factor ::= IDENTIFIER | INTEGERCONSTANT | DECIMALCONSTANT | RIGHT_PAREN Expression LEFT_PAREN  ;
+
+
+Factor ::= IDENTIFIER | INTEGERCONSTANT | DECIMALCONSTANT | RIGHT_PAREN Expression LEFT_PAREN    {: System.out.println("OK"); :};
 
 
 
@@ -111,24 +129,24 @@ Factor ::= IDENTIFIER | INTEGERCONSTANT | DECIMALCONSTANT | RIGHT_PAREN Expressi
 
 /* Loops */
 
-Forstmt ::= FOR Assignstmt TO Condition  DO Stmtlist  END ; 
-Whilestmt ::= Stmtsuffix DO Stmtlist  END;
-Stmtsuffix ::=  WHILE Condition ;
-Dowhilestmt ::=  DO Stmtlist   Stmtsuffix;
+Forstmt ::= FOR Assignstmt TO Condition  DO Stmtlist  END   {: System.out.println("OK"); :}; 
+Whilestmt ::= Stmtsuffix DO Stmtlist  END  {: System.out.println("OK"); :};
+Stmtsuffix ::=  WHILE Condition   {: System.out.println("OK"); :};
+Dowhilestmt ::=  DO Stmtlist   Stmtsuffix  {: System.out.println("OK"); :};
 
 
 
 
-Relop ::= EQ | GT | GE | LT | LE | NE;
+Relop ::= EQ | GT | GE | LT | LE | NE  {: System.out.println("OK"); :};
 
-Addop ::= PLUS | MINUS | OR;
+Addop ::= PLUS | MINUS | OR  {: System.out.println("OK"); :};
 
-Mulop ::= MULT | DIV | MOD | AND;
+Mulop ::= MULT | DIV | MOD | AND  {: System.out.println("OK"); :};
 
 Shiftop ::= TLT
           | TGT
           | DLT
-          | DGT;
+          | DGT  {: System.out.println("OK"); :};
 
 
-Literal ::= TEXTO;
+Literal ::= TEXTO  {: System.out.println("OK"); :};

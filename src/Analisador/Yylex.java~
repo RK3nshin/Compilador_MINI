@@ -304,15 +304,15 @@ class Yylex implements java_cup.runtime.Scanner {
   private int zzFinalHighSurrogate = 0;
 
   /* user code: */
-
     
-     TabelaSimbolos tabelaSimbolos = new TabelaSimbolos();
-
-     public Yylex(String filePath,  TabelaSimbolos symbolTable) throws IOException {
-        this.zzReader = new BufferedReader(new FileReader(filePath));
-        this.tabelaSimbolos = symbolTable;
+    TabelaSimbolos tabelaSimbolos =  new TabelaSimbolos() ;
+    public TabelaSimbolos getTabelaSimbolos (){
+        return tabelaSimbolos;
     }
 
+
+  
+  
 
 
   /**
@@ -712,12 +712,13 @@ class Yylex implements java_cup.runtime.Scanner {
             switch (zzLexicalState) {
             case YYINITIAL: {
               System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: <<EOF>>");
-              System.out.println("action [380] { tabelaSimbolos.imprimirTabela();"+ZZ_NL+"    System.exit(0); }");
-              tabelaSimbolos.imprimirTabela();
-    System.exit(0);
+              System.out.println("action [377] { Yytoken token = new Yytoken(Sym.EOF, yytext(), yyline, yychar, yychar + yylength(), \"Fim\");"+ZZ_NL+"    return token; }");
+              Yytoken token = new Yytoken(Sym.EOF, yytext(), yyline, yychar, yychar + yylength(), "Fim");
+    return token;
             }  // fall though
             case 107: break;
             default:
+
           { return new java_cup.runtime.Symbol(Sym.EOF); }
         }
       }
@@ -725,11 +726,8 @@ class Yylex implements java_cup.runtime.Scanner {
         switch (zzAction < 0 ? zzAction : ZZ_ACTION[zzAction]) {
           case 1: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [365] { Yytoken token = new Yytoken(Sym.CARACTERE, yytext(), yyline, yychar, yychar + yylength(), \"Caractere\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(Sym.CARACTERE, yytext(), yyline, yychar, yychar + yylength(), "Caractere");
-        tabelaSimbolos.adicionarEntrada(token);
-
-    return token;
+            System.out.println("action [365] { // Não é necessário um token para caracter é melhor reconhecer o literal }");
+            { // Não é necessário um token para caracter é melhor reconhecer o literal
             } 
             // fall through
           case 50: break;
@@ -762,7 +760,7 @@ class Yylex implements java_cup.runtime.Scanner {
           case 53: break;
           case 5: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [371] { System.out.println(\"Illegal character: <\" + yytext() + \">\" + \"line\" + yyline);"+ZZ_NL+"    Yytoken token = new Yytoken(Sym.error, yytext(), yyline, yychar, yychar + yylength(), \"Caractere\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
+            System.out.println("action [368] { System.out.println(\"Illegal character: <\" + yytext() + \">\" + \"line\" + yyline);"+ZZ_NL+"    Yytoken token = new Yytoken(Sym.error, yytext(), yyline, yychar, yychar + yylength(), \"Caractere\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
             { System.out.println("Illegal character: <" + yytext() + ">" + "line" + yyline);
     Yytoken token = new Yytoken(Sym.error, yytext(), yyline, yychar, yychar + yylength(), "Caractere");
         tabelaSimbolos.adicionarEntrada(token);
@@ -1100,8 +1098,8 @@ class Yylex implements java_cup.runtime.Scanner {
           case 87: break;
           case 39: 
             System.out.println("line: "+(yyline+1)+" "+"char: "+yychar+" "+"match: --"+zzToPrintable(yytext())+"--");
-            System.out.println("action [343] { Yytoken token = new Yytoken(-1, yytext(), yyline, yychar, yychar + yylength(), \"Literal\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
-            { Yytoken token = new Yytoken(-1, yytext(), yyline, yychar, yychar + yylength(), "Literal");
+            System.out.println("action [343] { Yytoken token = new Yytoken(Sym.TEXTO, yytext(), yyline, yychar, yychar + yylength(), \"Literal\");"+ZZ_NL+"        tabelaSimbolos.adicionarEntrada(token);"+ZZ_NL+""+ZZ_NL+"    return token; }");
+            { Yytoken token = new Yytoken(Sym.TEXTO, yytext(), yyline, yychar, yychar + yylength(), "Literal");
         tabelaSimbolos.adicionarEntrada(token);
 
     return token;

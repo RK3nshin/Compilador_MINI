@@ -81,7 +81,7 @@ action [185] { Yytoken token = new Yytoken(Sym.COMMA, yytext(), yyline, yychar, 
     return token; }
 Posicao na TS: 21
 lexema: ,
-Index: 26
+Index: 25
 Name: Comma
 Line: 2
 Begin: 37
@@ -140,7 +140,7 @@ action [199] { Yytoken token = new Yytoken(Sym.LEFT_PAREN, yytext(), yyline, yyc
     return token; }
 Posicao na TS: 23
 lexema: (
-Index: 29
+Index: 28
 Name: Left Parenthesis
 Line: 4
 Begin: 54
@@ -164,7 +164,7 @@ action [192] { Yytoken token = new Yytoken(Sym.RIGHT_PAREN, yytext(), yyline, yy
     return token; }
 Posicao na TS: 24
 lexema: )
-Index: 28
+Index: 27
 Name: Right Parenthesis
 Line: 4
 Begin: 56
@@ -176,7 +176,7 @@ action [179] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yych
     return token; }
 Posicao na TS: 25
 lexema: ;
-Index: 27
+Index: 26
 Name: Semicolon
 Line: 4
 Begin: 57
@@ -240,7 +240,7 @@ action [291] { Yytoken token = new Yytoken(Sym.MULT, yytext(), yyline, yychar, y
     return token; }
 Posicao na TS: 27
 lexema: *
-Index: 38
+Index: 37
 Name: Mult
 Line: 5
 Begin: 70
@@ -266,7 +266,7 @@ action [179] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yych
     return token; }
 Posicao na TS: 25
 lexema: ;
-Index: 27
+Index: 26
 Name: Semicolon
 Line: 5
 Begin: 75
@@ -300,7 +300,7 @@ action [199] { Yytoken token = new Yytoken(Sym.LEFT_PAREN, yytext(), yyline, yyc
     return token; }
 Posicao na TS: 23
 lexema: (
-Index: 29
+Index: 28
 Name: Left Parenthesis
 Line: 6
 Begin: 86
@@ -324,7 +324,7 @@ action [192] { Yytoken token = new Yytoken(Sym.RIGHT_PAREN, yytext(), yyline, yy
     return token; }
 Posicao na TS: 24
 lexema: )
-Index: 28
+Index: 27
 Name: Right Parenthesis
 Line: 6
 Begin: 88
@@ -336,7 +336,7 @@ action [179] { Yytoken token = new Yytoken(Sym.SEMICOLON, yytext(), yyline, yych
     return token; }
 Posicao na TS: 25
 lexema: ;
-Index: 27
+Index: 26
 Name: Semicolon
 Line: 6
 Begin: 89
@@ -356,7 +356,7 @@ Line: 7
 Begin: 91
 End: 94
 line: 8 char: 94 match: <<EOF>>
-action [380] { tabelaSimbolos.imprimirTabela();
+action [377] { tabelaSimbolos.imprimirTabela();
     System.exit(0); }
 Tabela de Símbolos:
 ID: 0, Lexema: program, Nome: Palavra reservada: program, Index: 2
@@ -380,11 +380,11 @@ ID: 17, Lexema: mod, Nome: Palavra reservada: mod, Index: 19
 ID: 18, Lexema: not, Nome: Palavra reservada: not, Index: 20
 ID: 19, Lexema: teste8, Nome: Identifier, Index: 21
 ID: 20, Lexema: X, Nome: Identifier, Index: 21
-ID: 21, Lexema: ,, Nome: Comma, Index: 26
+ID: 21, Lexema: ,, Nome: Comma, Index: 25
 ID: 22, Lexema: Y, Nome: Identifier, Index: 21
-ID: 23, Lexema: (, Nome: Left Parenthesis, Index: 29
-ID: 24, Lexema: ), Nome: Right Parenthesis, Index: 28
-ID: 25, Lexema: ;, Nome: Semicolon, Index: 27
+ID: 23, Lexema: (, Nome: Left Parenthesis, Index: 28
+ID: 24, Lexema: ), Nome: Right Parenthesis, Index: 27
+ID: 25, Lexema: ;, Nome: Semicolon, Index: 26
 ID: 26, Lexema: :=, Nome: ASSIGN_OP, Index: 24
-ID: 27, Lexema: *, Nome: Mult, Index: 38
+ID: 27, Lexema: *, Nome: Mult, Index: 37
 ID: 28, Lexema: 1.9, Nome: Numero Decimal, Index: 23
